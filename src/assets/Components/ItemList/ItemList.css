@@ -1,0 +1,10 @@
+.cardContainer {
+    max-width: 100%;
+    margin: 2.5rem 3.125rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}

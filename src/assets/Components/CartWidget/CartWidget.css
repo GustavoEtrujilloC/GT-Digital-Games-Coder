@@ -1,0 +1,10 @@
+.CartWidget {
+    width: 100%;
+    flex-basis: 25%;
+}
+
+.CartWidget img {
+    width: 2.125rem;
+    cursor: pointer;
+   
+}

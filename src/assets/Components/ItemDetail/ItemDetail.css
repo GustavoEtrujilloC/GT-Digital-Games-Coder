@@ -1,0 +1,101 @@
+.content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content .gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 6.25rem 3.125rem 0 6.25rem;
+  }
+  .content .gallery__image-container {
+    width: 37.5rem;
+    height: 37.5rem;
+    border-radius: 1.25rem;
+  }
+  .content .gallery__image-container:hover {
+    cursor: pointer;
+  }
+  .content .gallery__previous {
+    width: 2rem;
+  }
+  .content .gallery__next {
+    width: 2rem;
+  }
+  .gallery__thumbnails {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.3125rem 0 0.3125rem 0;
+    gap: .3125rem;
+  }
+  .gallery__thumbnail {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 1.875rem;
+  }
+  .details {
+    padding: 6.25rem 3.125rem 0 6.25rem;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .details__company {
+    align-self: flex-start;
+  }
+  .details__title {
+    font-size: 2.25rem;
+    align-self: flex-start;
+    margin-bottom: 2.5rem;
+  }
+  .details .details__product-quantity {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details .details__product-quantity .input {
+    margin: 0.9375rem 0;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details .details__product-quantity .input .input__minus {
+    width: 3rem;
+    height: 3rem;
+  }
+  .details .details__product-quantity .input .input__plus {
+    width: 3rem;
+    height: 3rem;
+  }
+  .details .details__product-quantity .input .input__number {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .details .details__product-quantity .details__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30%;
+    height: 3.75rem;
+    background-color: #ee8b00;
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 500;
+    align-items: center;
+  }
+  .details .details__product-quantity .details__button__hover {
+    background-color: black;
+    cursor: pointer;
+  }

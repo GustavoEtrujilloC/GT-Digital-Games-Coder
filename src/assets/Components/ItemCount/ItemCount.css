@@ -1,0 +1,77 @@
+.input {
+    margin: 0.9375rem 0;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.imgCart {
+    display: flex;
+    align-items: center;
+    margin: .625rem
+}
+
+.input__minus {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.input__minus:hover {
+    cursor: pointer;
+}
+
+.input__minus:active {
+    transform: scale(1.15, 1.15);
+    color: #ee8b00;
+
+}
+
+.input__plus {
+    width: 1.875rem;
+    height: 1.875rem;
+
+}
+
+.input__plus:hover {
+    cursor: pointer;
+}
+
+.input__plus:active {
+    transform: scale(1.15, 1.15);
+    color: #ee8b00
+
+}
+
+.input__number {
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+  
+
+}
+
+  .input .details__button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ee8b00;
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 500;
+    align-items: center;
+    padding: .625rem;
+    transition: .8s;
+  }
+  .input .details__button:hover {
+    background-color: black;
+    cursor: pointer;
+  }
