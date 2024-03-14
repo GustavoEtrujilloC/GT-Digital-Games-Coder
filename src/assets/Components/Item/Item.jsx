@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../Item/Item.css';
 
 
@@ -16,7 +17,7 @@ const Item = ({producto}) => {
             
         </div>
             <h3 className="price">Precio: {producto.price}$</h3>
-            <a href="#" >Comprar</a>
+            <Link to={`/item/${producto.id}`} >Comprar</Link>
         </div>    
     </div>
 )

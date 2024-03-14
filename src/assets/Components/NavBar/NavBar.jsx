@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -13,13 +14,15 @@ const NavBar = () => {
     </div>
     <nav>
       <ul className="navbar">
-        <li><a className="active" href="index.html">Inicio</a></li>
-        <li><a href="#">Tienda</a></li>
-        <li><a href="#">Ps4</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Faq</a></li>
+        <li><NavLink to="index.html">Inicio</NavLink></li>
+        <li><NavLink to="/store">Tienda</NavLink></li>
+        <li><NavLink to="/categories/ps4">Ps4</NavLink></li>
+        <li><NavLink to="/categories/reserva">Reserva</NavLink></li>
+        <li><NavLink to="/categories/novedades">Novedades</NavLink></li>
+        <li><NavLink to="/categories/ofertas">Ofertas</NavLink></li>
+        <li><NavLink to="/contacto">Contacto</NavLink></li>
+        <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/faq">Faq</NavLink></li>
       </ul>
     </nav>
       <div className="CartWidget">
