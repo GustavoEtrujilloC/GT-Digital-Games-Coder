@@ -1,21 +1,20 @@
 import '../CartWidget/CartWidget.css'
 import { FaShoppingCart } from "react-icons/fa";
-import { LuBadge } from "react-icons/lu";
 import { CartContext } from '../../../context/CartContext';
 import { useContext } from "react"
+import { FaCircle } from "react-icons/fa";
 
 const CartWidget = ({counter}) => {
   const {cartQuantity} = useContext(CartContext)
 
   return (
     <div className='CartWidget'>
-
-        {cartQuantity() > 0 && <LuBadge className='shoppingBadge'/>}
-        <span className='itemsNumber'>{cartQuantity()}</span>
-      <div className='cartContainer'>
-      
-        <FaShoppingCart className='shoppingCart' />    
-      </div>    
+      <div className='badgeContainer'>
+        {cartQuantity() > 0 && <FaCircle className='shoppingBadge'/>}
+        {cartQuantity() > 0 && <span className='itemsNumber'>{cartQuantity()}</span>}
+      </div>
+        <FaShoppingCart className='shoppingCart' />  
+    
         
     </div>
     

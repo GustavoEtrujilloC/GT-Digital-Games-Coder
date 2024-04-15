@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    margin-top: 5rem ;
+}
+
+
+.cartDetails {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;
+    margin: .9375rem 0 .9375rem 0;
+}
+
+img {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.cartTotal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}

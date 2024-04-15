@@ -1,3 +1,11 @@
+.checkoutContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -7,6 +15,7 @@
     padding: 20px;
     border-radius: 20px;
     position: relative;
+    margin-top: 5rem;
   }
   
   .title {
@@ -127,4 +136,15 @@
       transform: scale(1.8);
       opacity: 0;
     }
+    
+  }
+
+  .thanksContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .9375rem;    
   }

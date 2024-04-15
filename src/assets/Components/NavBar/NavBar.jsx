@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <React.StrictMode>
+    <>
 <header  className="contenedor-header">
     <div className="contenedor-imgLogo">
       <Logo />
@@ -16,7 +16,6 @@ const NavBar = () => {
       <ul className="navbar">
         <li><NavLink to="index.html">Inicio</NavLink></li>
         <li><NavLink to="/store">Tienda</NavLink></li>
-        <li><NavLink to="/categories/ps4">Ps4</NavLink></li>
         <li><NavLink to="/categories/reserva">Reserva</NavLink></li>
         <li><NavLink to="/categories/novedades">Novedades</NavLink></li>
         <li><NavLink to="/categories/ofertas">Ofertas</NavLink></li>
@@ -25,14 +24,14 @@ const NavBar = () => {
         <li><NavLink to="/faq">Faq</NavLink></li>
       </ul>
     </nav>
-      <div className="CartWidget">
-        <NavLink to="/cart"> 
-        <CartWidget counter={15} />
-        </NavLink>
+    <div className="CartWidget">
+      <NavLink to="/cart"> 
+      <CartWidget counter={15} />
+      </NavLink>
       
-      </div>
+    </div>
 </header>
-</React.StrictMode>
+</>
   )
 }
 

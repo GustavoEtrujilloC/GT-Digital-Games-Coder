@@ -1,18 +1,17 @@
 .CartWidget {
     position: relative;
-    width: 100%;
-    flex-basis: 15%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
 
-.cartContainer {
-    margin-left: .9375rem;
-    
+
+
+.badgeContainer {
+    position: relative;
 }
 
 .shoppingCart {
@@ -20,15 +19,13 @@
     align-items: center;
     text-align: center;
     font-size: 2.25rem;
-    margin-left: 2.8125rem;
+    margin-left: 0;
 }
 
 .shoppingBadge {
-    position: absolute;
-    top: 50%;
     color: orange;
-    transform: translate(5%,-50%);
-    font-size: 2.5rem;
+    font-size: 1.875rem;
+    z-index: 0;
     
     
     
@@ -36,12 +33,12 @@
 }
 
 .itemsNumber {
-    position: absolute;
-    top: 50%;
-    color: orange;
-    transform: translate(50%,-50%);
-    font-size: 1.125rem;
-
-    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Para asegurarse de que el texto esté sobre el ícono */
+        color: white;
+        font-size: 1.125rem;
     
 }

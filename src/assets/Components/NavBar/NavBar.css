@@ -4,14 +4,14 @@
   background-color: black;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   align-items: center;
 }
 .contenedor-header .contenedor-imgLogo {
   width: 22.5rem;
   height: 100%;
-  flex-basis: 25%;
+  
   
 }
 .contenedor-header .contenedor-imgLogo .imgLogo {
@@ -26,13 +26,12 @@
 }
 .contenedor-header .navbar {
   display: flex;
-  flex-basis: 50%;
   flex-direction: row;
-  gap: 1.875rem;
+  gap: 3.125rem;
 }
 .contenedor-header .navbar li {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: bold;
   color: white;
   text-decoration: none;

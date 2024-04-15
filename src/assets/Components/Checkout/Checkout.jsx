@@ -4,6 +4,7 @@ import { useContext, useState } from 'react'
 import { db } from '../../../Services/firebase'
 import { CartContext } from '../../../context/CartContext'
 import { Link } from 'react-router-dom'
+import Button1 from '../Buttons/Button1'
 
 const Checkout = () => {
     const [user, setUser] = useState({})
@@ -46,14 +47,14 @@ const Checkout = () => {
             addDoc(sales, order)
             .then((res)=> {
                 //act Stock
-                cart.foreach((item)=>{
+/*                 cart.foreach((item)=>{
                     const docRef = doc(db, 'productos', item.id)
                     getDoc(docRef)
                     .then((dbdoc)=> {
                         updateDoc(docRef, {stock: dbdoc.data().stock - item.quantity})
                     })
                 })
-                setOrderId(res.id)
+ */                setOrderId(res.id)
                 clearCart()
             })
             .catch((error)=> console.log(error))
@@ -68,16 +69,16 @@ const Checkout = () => {
         
         ? 
 
-        <div>
-            <h4>Gracias por confiar en GT Digital Games</h4>
+        <div className='thanksContainer'>
+            <h4>{user.name}, gracias por confiar en GT Digital Games</h4>
             <h5>Tu numero de pedido es el {orderId}, pronto enviaremos un correo con todos los datos de tu compra.</h5>
-            <Link to='/'>Volver a Inicio</Link>
+            <Link to='/'><Button1>Volver a Inicio</Button1></Link>
         </div>
         :
-        <div>
+        <div className='checkoutContainer'>
             <form className="form" onSubmit={checkout}>
-                <p className="title">Completa tus datos</p>
-                <p className="message">Para finalizar la compra completa tus datos</p>
+                <p className="title">Finalizar Compra</p>
+                <p className="message">Completa tus datos</p>
                     <div className="flex">
                     <label>
                         <input name = 'name'  placeholder="Nombre" type="text" className="input" onChange={userData} />
