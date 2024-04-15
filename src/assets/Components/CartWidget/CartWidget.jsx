@@ -1,14 +1,17 @@
 import '../CartWidget/CartWidget.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { LuBadge } from "react-icons/lu";
+import { CartContext } from '../../../context/CartContext';
+import { useContext } from "react"
 
-const CartWidget = () => {
+const CartWidget = ({counter}) => {
+  const {cartQuantity} = useContext(CartContext)
 
   return (
     <div className='CartWidget'>
 
-        <LuBadge className='shoppingBadge'/>
-        <span className='itemsNumber'>14</span>
+        {cartQuantity() > 0 && <LuBadge className='shoppingBadge'/>}
+        <span className='itemsNumber'>{cartQuantity()}</span>
       <div className='cartContainer'>
       
         <FaShoppingCart className='shoppingCart' />    

@@ -4,19 +4,11 @@ import { FaPlusSquare } from "react-icons/fa";
 import { FaMinusSquare } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import './ItemCount.css'
+import { NavLink } from 'react-router-dom';
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
 
-  const onAdd = () => {
-      if (count > 0 || stock === 0){
-        alert("Puedes comprar")
-        
-      }
-      else {
-        alert('Debes seleccionar una cantidad')
-      }
-    
-}
+
   const [count, setCount] = useState(1)
   
   const sumar = ()=> {
@@ -30,6 +22,10 @@ const ItemCount = ({stock}) => {
     setCount(count-1)
   }
 
+  const sendQuantity = ()=> {
+    onAdd(count)
+  }
+
   
   return (
     <div className="input">
@@ -37,7 +33,7 @@ const ItemCount = ({stock}) => {
         <span className="input__number">{count}</span>
         <FaPlusSquare className="input__plus" onClick={sumar} />
         <div className='btnContainer'>
-        <button className="details__button" onClick={onAdd}><span className='imgCart'><FaShoppingCart /></span>Comprar</button>
+        <button className="details__button" onClick={()=> onAdd(count)}><span className='imgCart'><FaShoppingCart /></span>Comprar</button>
         
 
         </div>

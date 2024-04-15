@@ -55,9 +55,10 @@
     left: 50%;
     width: 12.5rem;
     height: 11.25rem;
-    object-fit: cover;
+    
     border-radius: 1.25rem;
     transform: translate(-50%, -50%) rotate(-10deg);
+    
   }
   .card .contentBx {
     position: absolute;
