@@ -1,12 +1,13 @@
-.cartContainer {
+.emptyCartContainer {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .9375rem;
 }
 
-.EmptyCart {
+.emptyCart {
     margin-top: 12.5rem;
     font-size: 1.5625rem;
     font-weight: bold;

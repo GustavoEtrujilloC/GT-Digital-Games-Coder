@@ -122,7 +122,7 @@ export const getProducts = () => {
                 resolve(productos)
             }
 
-        }, 2000)
+        }, 5000)
     
 })
 

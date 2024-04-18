@@ -5,12 +5,10 @@ import {useParams} from 'react-router-dom'
 import Loader from '../Loader/Loader'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../../Services/firebase'
-import AddGames from '../../../../AddGames/AddGames'
 
 
-function ItemListContainer(props) {
+function ItemListContainer({greeting}) {
 
-    const {greeting} = props
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
     const {categoryId} = useParams()
@@ -32,7 +30,7 @@ function ItemListContainer(props) {
  */
     //Firebase
 
-    useEffect(()=>{
+      useEffect(()=>{
         setLoading(true)
         const itemcollection = categoryId ? query(collection(db, 'products'), where('category', '==', categoryId)) : collection(db, 'products')
         getDocs(itemcollection)
@@ -49,6 +47,8 @@ function ItemListContainer(props) {
     .finally(()=> setLoading(false))
         
     },[categoryId])
+ 
+
 
     if(loading) {
         return <Loader />
@@ -57,7 +57,11 @@ function ItemListContainer(props) {
     return(
 
         <div>
-            <h1 className='Title'>{props.greeting}</h1>
+            { 
+            categoryId 
+            ?<h1 className='Title'><span >{categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}</span></h1> 
+            :<h1 className='Title'>{greeting}</h1>
+            }
             
             <ItemList productos={productos}/>
         </div>

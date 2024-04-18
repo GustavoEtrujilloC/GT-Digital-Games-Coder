@@ -17,13 +17,14 @@ function App() {
       <BrowserRouter>
       <NavBar />
         <Routes>
-          <Route path='/' element={<ItemListContainer greeting="Tienda de Juegos Digitales"/>} />
-          <Route path='/categories/:categoryId' element={<ItemListContainer greeting = 'categoria:'/>} />
-          <Route path='/store' element={<ItemListContainer/>} /> 
+          <Route path='/' element={<ItemListContainer greeting= "Tienda de Juegos Digitales"/>} />
+          <Route path='/home' element={<p>En Contruccion...</p>} />
+          <Route path='/categories/:categoryId' element={<ItemListContainer greeting = 'Categoria:'/>} />
+          <Route path='/store' element={<ItemListContainer greeting= "Tienda de Juegos Digitales"/>} /> 
           <Route path='/item/:itemId' element={<ItemDetailContainer/>} /> 
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
-          <Route path='/addgames' element={<AddGames/>}/>
+          <Route path='/addgames' element={<AddGames/>}/> // Solo usar para la acctualizacion de Juegos en la base de datos
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -1,16 +1,30 @@
-import React, {useContext} from 'react'
+import React, {useContext , useState} from 'react'
 import CartView from '../CartView/CartView'
 import { CartContext } from '../../../context/CartContext'
 import '../Cart/Cart.css'
 import { TbShoppingBagX } from "react-icons/tb";
+import Button1 from '../Buttons/Button1';
+import { Link } from 'react-router-dom';
 
 
-export const cart = () => {
+const cart = () => {
   const {cart} = useContext(CartContext)
+
   return (
-    <div className='cartContainer'>
-      {!cart.length ? <p className='EmptyCart'> El carrito esta vacio <TbShoppingBagX fontSize={40} /></p> : <CartView />}
+    <div>
+        {!cart.length ? 
+        <div className='emptyCartContainer'>
+          <p className='emptyCart'> El carrito esta vacio <TbShoppingBagX fontSize={40} /> </p>
+          <Link to='/store'><Button1>Ir a la tienda</Button1></Link> 
+        </div>      
+  
+        : <CartView />}
+        
     </div>
+ 
+
+
+    
   )
 }
 
