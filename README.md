@@ -22,7 +22,7 @@
 - JavaScript
 - React
 
-### Proyecto a futuro.Proyecto a futuro.
+### Proyecto a futuro
 
 - Scraper para obtener base de datos de juegos de pagina oficial de PlayStation
 - Pasarela de pago
