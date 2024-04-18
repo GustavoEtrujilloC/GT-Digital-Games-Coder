@@ -11,9 +11,27 @@
 
 ### Librerias utilizadas
 
-- ReactIcons [iconos de la APP]
-- Firebase [Base de datos]
+- React-Icons [iconos de la APP] https://react-icons.github.io/react-icons/
+- Firebase [Base de datos] https://firebase.google.com/
 - React Router Dom [Navegacion por rutas]
+
+### Tecnologias empleadas en el proyecto hasta el dia 14/10/2023Tecnologias empleadas en el proyecto hasta el dia 14/10/2023
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+### Proyecto a futuro.Proyecto a futuro.
+
+- Scraper para obtener base de datos de juegos de pagina oficial de PlayStation
+- Pasarela de pago
+- Manejo de cuentas y perfiles para usuario, ver pedidos realizados, pedidos, etc.
+- Base de datos de todo el catalogo de Playstation 4 y Playstation 5.
+
+### Logo del Proyecto
+
+![GT Digital Games Logo](https://camo.githubusercontent.com/db53bf70271d8c0427d79aef4d9a285818f30b3c6ee34b24488ee34ca55d177c/68747470733a2f2f67746469676974616c67616d65732e6e65746c6966792e6170702f6173736574732f696d672f4c6f676f2e706e67 "GT Digital Games Logo")
 
 ### Version Host
 
