@@ -15,7 +15,7 @@
 - Firebase [Base de datos] https://firebase.google.com/
 - React Router Dom [Navegacion por rutas]
 
-### Tecnologias empleadas en el proyecto hasta el dia 14/10/2023Tecnologias empleadas en el proyecto hasta el dia 14/10/2023
+### Tecnologias empleadas en el proyecto
 
 - HTML
 - CSS
@@ -35,6 +35,7 @@
 
 ### Version Host
 
+https://gt-digital-games-coder-fa3wqt55r-gustavoetrujillocs-projects.vercel.app/store
 
 
 ### Desarrollado por: Gustavo Trujillo
