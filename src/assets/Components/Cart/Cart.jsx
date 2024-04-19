@@ -7,7 +7,7 @@ import Button1 from '../Buttons/Button1';
 import { Link } from 'react-router-dom';
 
 
-const cart = () => {
+const Cart = () => {
   const {cart} = useContext(CartContext)
 
   return (
@@ -30,4 +30,4 @@ const cart = () => {
 
 
 
-export default cart
+export default Cart

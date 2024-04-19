@@ -3,14 +3,11 @@ import Logo from '../Logo/Logo';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
-import  ModalCart  from '../Modals/ModalCart';
 
 
 
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState (false);
-  const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
     <>
@@ -30,7 +27,7 @@ const NavBar = () => {
         <li><NavLink to="/faq">Faq</NavLink></li>
  */}      </ul>
     </nav>
-    <div className="CartWidget" isOpen={isOpen} toggleOpen={toggleOpen}>
+    <div className="CartWidget" >
       <NavLink to="/cart" >
       <CartWidget counter={15} />
       </NavLink>
