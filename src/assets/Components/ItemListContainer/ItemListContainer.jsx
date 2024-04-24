@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom'
 import Loader from '../Loader/Loader'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../../Services/firebase'
+import '../ItemListContainer/ItemListContainer.css'
 
 
 function ItemListContainer({greeting}) {

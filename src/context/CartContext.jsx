@@ -4,7 +4,8 @@ export const CartContext = createContext ()
 
 
 export const CartProvider = ({children}) => {
-    const savedCart = JSON.parse(localStorage.getItem('cart'));
+    
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     const [cart, setCart] = useState(savedCart)
 
     useEffect(() => {

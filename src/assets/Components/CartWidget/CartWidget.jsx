@@ -4,7 +4,7 @@ import { CartContext } from '../../../context/CartContext';
 import { useContext } from "react"
 import { FaCircle } from "react-icons/fa";
 
-const CartWidget = ({counter}) => {
+const CartWidget = ({}) => {
   const {cartQuantity} = useContext(CartContext)
 
   return (
@@ -13,7 +13,7 @@ const CartWidget = ({counter}) => {
         {cartQuantity() > 0 && <FaCircle className='shoppingBadge'/>}
         {cartQuantity() > 0 && <span className='itemsNumber'>{cartQuantity()}</span>}
       </div>
-        <FaShoppingCart className='shoppingCart' />  
+        <FaShoppingCart className='shoppingCart'/>  
     
         
     </div>

@@ -24,7 +24,7 @@ function App() {
           <Route path='/item/:itemId' element={<ItemDetailContainer/>} /> 
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
-          <Route path='/addgames' element={<AddGames/>}/> // Solo usar para la acctualizacion de Juegos en la base de datos
+          <Route path='/addgames' element={<AddGames/>}/> // Solo usar para la actualizacion de Juegos en la base de datos
         </Routes>
       </BrowserRouter>
     </CartProvider>
