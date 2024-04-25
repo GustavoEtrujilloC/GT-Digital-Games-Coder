@@ -22,29 +22,21 @@ const NavBar = () => {
   }
 
   const [menuVisible, setMenuVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset || document.documentElement.scrollTop);
 
   useEffect(() => {
-    let lastScrollTop = 0;
     const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScrollTop > 100 ) {
-        if(menuVisible)
-        setMenuVisible(false);
-      } else {
-        if(!menuVisible)
-        setMenuVisible(true);
-      }
-      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [menuVisible]); 
+      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      const isVisible = currentScrollPos < prevScrollPos;
 
-  const handleClickScroll = () => {
-    setMenuVisible(!menuVisible);
-  };
+      setMenuVisible(isVisible);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
 
   
 
