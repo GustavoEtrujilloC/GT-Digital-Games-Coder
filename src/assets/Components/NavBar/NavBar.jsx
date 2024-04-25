@@ -15,7 +15,7 @@ import { FaRegWindowClose } from "react-icons/fa";
 
 const NavBar = () => {
 
-  const [menu , setMenu] = useState(false)
+  const [menu , setMenu] = useState(true)
 
   const handleClick = () => {
     setMenu(!menu)

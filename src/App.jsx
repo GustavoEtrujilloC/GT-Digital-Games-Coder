@@ -9,11 +9,29 @@ import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Checkout from './assets/Components/Checkout/Checkout';
 import AddGames from '../AddGames/AddGames';
+import Loader from './assets/Components/Loader/Loader';
+import { useState, useEffect } from 'react';
+
 
 
 function App() {
+  const [loading, setLoading] = useState(true); 
+
+  useEffect(() => {
+    
+    const timeout = setTimeout(() => {
+      setLoading(false); 
+    }, 2000);
+
+    
+    return () => clearTimeout(timeout);
+  }, []); 
+
+
   return (
     <CartProvider>
+      {loading ? 
+        <Loader /> : (
       <BrowserRouter>
       <NavBar />
         <Routes>
@@ -27,6 +45,7 @@ function App() {
           <Route path='/addgames' element={<AddGames/>}/> // Solo usar para la actualizacion de Juegos en la base de datos
         </Routes>
       </BrowserRouter>
+)}
     </CartProvider>
   );
 }

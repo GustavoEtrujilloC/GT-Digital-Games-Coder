@@ -77,7 +77,7 @@ const Checkout = () => {
         :
         <div className='checkoutContainer'>
             <form className="form" onSubmit={checkout}>
-                <p className="title">Finalizar Compra</p>
+                <p className="titleCheckout">Finalizar Compra</p>
                 <p className="message">Completa tus datos</p>
                     <div className="flex">
                     <label>

@@ -5,6 +5,7 @@ import { FaMinusSquare } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import './ItemCount.css'
 import { NavLink } from 'react-router-dom';
+import Button1 from '../Buttons/Button1'
 
 const ItemCount = ({stock, onAdd}) => {
 
@@ -29,13 +30,13 @@ const ItemCount = ({stock, onAdd}) => {
   
   return (
     <div className="input">
-        <FaMinusSquare className="input__minus" onClick={restar} />
-        <span className="input__number">{count}</span>
-        <FaPlusSquare className="input__plus" onClick={sumar} />
+        <div className='inputNumberContainer'>
+          <FaMinusSquare className="input__minus" onClick={restar} />
+          <span className="input__number">{count}</span>
+          <FaPlusSquare className="input__plus" onClick={sumar} />
+        </div>
         <div className='btnContainer'>
-        <button className="details__button" onClick={()=> onAdd(count)}><span className='imgCart'><FaShoppingCart /></span>Comprar</button>
-        
-
+          <Button1 onClick={()=> onAdd(count)}>Comprar</Button1>
         </div>
         
     </div>

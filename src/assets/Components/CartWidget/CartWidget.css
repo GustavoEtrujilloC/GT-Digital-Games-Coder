@@ -14,24 +14,28 @@
 }
 
 .shoppingCart {
-    color: orangered;
+    color: #ee8b00 ;
     align-items: center;
     text-align: center;
-    font-size: 1.875rem;
+    font-size: 2.5rem;
     margin-left: 0;
 }
 
 .shoppingBadge {
-    color: orange;
+    color: red ;
     font-size: 1.5625rem;
     z-index: 0;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translate(50%, -50%);
 }
 
 .itemsNumber {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    right: 10%;
+    transform: translate(50%, -50%);
     z-index: 1;
     color: white;
     font-size: 1.125rem;

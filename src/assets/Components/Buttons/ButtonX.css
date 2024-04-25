@@ -1,5 +1,5 @@
 .buttonX {
-    width: 150px;
+    width: 6.25rem;
     height: 50px;
     cursor: pointer;
     display: flex;
@@ -16,20 +16,23 @@
    }
    
    .buttonX .text {
-    transform: translateX(35px);
+    transform: translateX(0px);
     color: white;
     font-weight: bold;
+    font-size: 1rem;
+    
    }
    
    .buttonX .icon {
     position: absolute;
     border-left: 1px solid #c41b1b;
-    transform: translateX(110px);
+    transform: translateX(100px);
     height: 40px;
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
    }
    
    .buttonX svg {
@@ -46,7 +49,8 @@
    }
    
    .buttonX:hover .icon {
-    width: 150px;
+    width: 6.25rem;
+    opacity: 1;
     border-left: none;
     transform: translateX(0);
    }

@@ -145,3 +145,11 @@
     box-shadow: 0.0625rem 0.0625rem 0.3125rem 0.3125rem rgb(204, 195, 195);
   }
   
+
+  @media screen and (max-width: 320px) {
+    .cardContainer {
+      width: 95%;
+      
+     
+    }
+  }

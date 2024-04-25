@@ -43,7 +43,7 @@
 .menuIcon {
   display: none;
   z-index: 50;
-  margin: 0 .625rem 0 .9375rem  
+  margin: 0 .625rem 
 }
 
 .menuIcon:hover {
@@ -378,12 +378,3 @@
 
 }
 
-/* media (max-width: 1440px)
-media (max-width: 1250px)
-media (max-width: 1024px)
-media (max-width: 768px) 
-media (max-width:712px) {
-media (max-width:576px) {
-media (max-width: 425px) 
-m
- */
