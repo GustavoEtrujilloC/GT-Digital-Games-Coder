@@ -9,6 +9,7 @@ const Button1 = ({ onClick, children, color, font }) => {
     </button>
 
 
+
   )
 }
 

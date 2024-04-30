@@ -1,5 +1,5 @@
-.buttonX {
-    width: 6.25rem;
+.noselect {
+    width: 150px;
     height: 50px;
     cursor: pointer;
     display: flex;
@@ -11,54 +11,50 @@
     background: #e62222;
    }
    
-   .buttonX, .buttonX span {
+   .noselect, .noselect span {
     transition: 200ms;
    }
    
-   .buttonX .text {
-    transform: translateX(0px);
+   .noselect .text {
+    transform: translateX(35px);
     color: white;
     font-weight: bold;
-    font-size: 1rem;
-    
    }
    
-   .buttonX .icon {
+   .noselect .icon {
     position: absolute;
     border-left: 1px solid #c41b1b;
-    transform: translateX(100px);
+    transform: translateX(110px);
     height: 40px;
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
    }
    
-   .buttonX svg {
+   .noselect svg {
     width: 15px;
     fill: #eee;
    }
    
-   .buttonX:hover {
+   .noselect:hover {
     background: #ff3636;
    }
    
-   .buttonX:hover .text {
+   .noselect:hover .text {
     color: transparent;
    }
    
-   .buttonX:hover .icon {
-    width: 6.25rem;
-    opacity: 1;
+   .noselect:hover .icon {
+    width: 150px;
     border-left: none;
     transform: translateX(0);
    }
    
-   .buttonX:focus {
+   .noselect:focus {
     outline: none;
    }
    
-   .buttonX:active .icon svg {
+   .noselect:active .icon svg {
     transform: scale(0.8);
    }
