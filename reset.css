@@ -1,6 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 0.875rem;
+
+    /* width de la barra */
   }
+
+  &::-webkit-scrollbar-track {
+    background: #1b1521;
+
+    /* color de fondo de la barra */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #1c31a5;
+
+    /* color del fondo de la barra */
+    border-radius: 20px;
+
+    /* radio del borde de la barra */
+    border: 3px solid #ffb914;
+
+    /* borde de la barrs */
+  }
+}

@@ -1,53 +1,71 @@
-import './App.css';
-import '../reset.css';
-import NavBar from '/src/assets/Components/NavBar/NavBar';
-import Cart from './assets/Components/Cart/Cart';
-import './assets/Components/ItemCount/ItemCount.css';
-import ItemListContainer from './assets/Components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './assets/Components/ItemDetailContainer/ItemDetailContainer';
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
-import Checkout from './assets/Components/Checkout/Checkout';
-import AddGames from '../AddGames/AddGames';
-import Loader from './assets/Components/Loader/Loader';
-import { useState, useEffect } from 'react';
-
-
+import "./App.css";
+import "../reset.css";
+import NavBar from "/src/assets/Components/NavBar/NavBar";
+import Cart from "./assets/Components/Cart/Cart";
+import "./assets/Components/ItemCount/ItemCount.css";
+import ItemListContainer from "./assets/Components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./assets/Components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import Checkout from "./assets/Components/Checkout/Checkout";
+import AddGames from "../AddGames/AddGames";
+import Loader from "./assets/Components/Loader/Loader";
+import { useState, useEffect } from "react";
+import Login from "./assets/Components/Login/Login";
+import Faq from "./assets/Components/Faq/Faq";
+import Home from "./assets/Components/Home/Home";
+import Contacto from "./assets/Components/Contacto/Contacto";
+import "./mediaQuerys.css";
 
 function App() {
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
     const timeout = setTimeout(() => {
-      setLoading(false); 
+      setLoading(false);
     }, 2000);
 
-    
     return () => clearTimeout(timeout);
-  }, []); 
-
+  }, []);
 
   return (
     <CartProvider>
-      {loading ? 
-        <Loader /> : (
-      <BrowserRouter>
-      <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer greeting= "Tienda de Juegos Digitales"/>} />
-          <Route path='/home' element={<p>En Contruccion...</p>} />
-          <Route path='/categories/:categoryId' element={<ItemListContainer greeting = 'Categoria:'/>} />
-          <Route path='/store' element={<ItemListContainer greeting= "Tienda de Juegos Digitales"/>} /> 
-          <Route path='/item/:itemId' element={<ItemDetailContainer/>} /> 
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>
-          <Route path='/addgames' element={<AddGames/>}/> // Solo usar para la actualizacion de Juegos en la base de datos
-        </Routes>
-      </BrowserRouter>
-)}
+      {loading ? (
+        <Loader />
+      ) : (
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <ItemListContainer greeting="Tienda de Juegos Digitales" />
+              }
+            />
+            <Route path="/home" element={<Home />} />
+            <Route
+              path="/categories/:categoryId"
+              element={<ItemListContainer greeting="Categoria:" />}
+            />
+            <Route
+              path="/store"
+              element={
+                <ItemListContainer greeting="Tienda de Juegos Digitales" />
+              }
+            />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/addgames" element={<AddGames />} /> // Solo usar para
+            la actualizacion de Juegos en la base de datos
+          </Routes>
+        </BrowserRouter>
+      )}
     </CartProvider>
   );
 }
 
-export default App
+export default App;
