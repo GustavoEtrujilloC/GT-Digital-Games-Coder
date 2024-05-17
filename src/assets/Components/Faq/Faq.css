@@ -1,105 +1,206 @@
 .background_faq {
+  width: 100%;
   padding-top: 9.375rem;
   background-image: url("../../img/fondo_faq.webp");
-  background-size: fill;
-  height: 93.75rem;
+  background-size: cover;
+  height: auto;
   background-color: black;
   background-repeat: no-repeat;
+  padding-bottom: 1.875rem;
 }
 
-.faq_h1 {
-  width: 100%;
-  height: 9.375rem;
-  position: relative;
-  padding: 0;
-  margin: auto;
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: #f4f4f4;
-  text-align: center;
-  text-shadow: 6px 6px 8px black;
-  animation: textoH1 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  padding: 1.875rem;
-}
-.faq_h1 span {
-  font-size: 4.375rem;
-  font-weight: bold;
-}
-
-.container_faq {
+.accordion_container {
   width: 80%;
   height: auto;
-  margin: 3.75rem auto;
-  padding: 2.5rem 0.625rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: start;
+  gap: 2.5rem;
+  margin: 5rem auto;
   backdrop-filter: blur(1.875rem);
-  border-radius: 0.625rem;
-  border: 0.0625rem solid rgb(255, 255, 255);
+  padding: 3.75rem;
+  border-radius: 0.9375rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
-.container_faq .acordeon_1,
-.container_faq .acordeon_2 {
+
+.accordion,
+.accordion2 {
   width: 50%;
 }
-.container_faq .acordeon_1 h2,
-.container_faq .acordeon_2 h2 {
+.faq_h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.faq_p {
+  font-weight: 600;
+  text-align: justify;
+}
+
+.accordion h2,
+.accordion2 h2 {
+  width: 100%;
   text-align: center;
   font-size: 1.875rem;
   font-weight: bold;
   color: #f4f4f4;
-  letter-spacing: 0.0313rem;
-  padding: 1.25rem;
-}
-.container_faq .acordeon_1 details,
-.container_faq .acordeon_2 details {
-  position: relative;
-  margin: 1.25rem;
-}
-.container_faq .acordeon_1 details[open] summary ~ *,
-.container_faq .acordeon_2 details[open] summary ~ * {
-  animation: faqSlide 0.8s ease-in-out both;
-}
-.container_faq .acordeon_1 details summary,
-.container_faq .acordeon_2 details summary {
-  width: 100%;
-  text-align: center;
-  padding: 0.625rem 0;
-  font-size: 0.875rem;
-  font-weight: 100;
-  letter-spacing: 0.025rem;
-  color: #f4f4f4;
-  list-style: none;
-  background-color: #1b1521;
-  border: 0.0625rem solid #f4f4f4;
-  border-radius: 0.625rem;
-  cursor: pointer;
-  transition: 1s ease-in-out;
-}
-.container_faq .acordeon_1 details summary:hover,
-.container_faq .acordeon_2 details summary:hover {
-  background-color: #f03813;
-  box-shadow: 0 0 1.25rem 0.625rem #f4f4f4;
-  transform: translateY(-0.625rem);
-}
-.container_faq .acordeon_1 details p,
-.container_faq .acordeon_2 details p {
-  text-align: justify;
-  color: #f4f4f4;
-  font-size: 0.875rem;
-  font-weight: 200;
-  padding: 0.5rem;
+  padding-bottom: 2.5rem;
+  text-shadow: 0.1875rem 0.125rem 0.9375rem black;
 }
 
-@keyframes faqSlide {
-  0% {
-    transform: translateY(-10px);
-    opacity: 0;
+@media screen and (max-width: 1200px) {
+  .background_faq {
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
+    background-position: center;
   }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
+
+  .accordion_container {
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.875rem auto;
+    padding: 0.625rem;
+  }
+  .accordion,
+  .accordion2 {
+    width: 95%;
+    padding: 1.25rem 0 0 0;
+    margin: auto;
+  }
+  .accordion h2,
+  .accordion2 h2 {
+    font-size: 2rem;
+  }
+  .faq_h3 {
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: bold;
+  }
+  .faq_p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .background_faq {
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
+    background-position: center;
+  }
+
+  .accordion_container {
+    width: 75%;
+    height: auto;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.875rem auto;
+    padding: 0.625rem;
+  }
+  .accordion,
+  .accordion2 {
+    width: 95%;
+    padding: 1.25rem 0 0 0;
+    margin: auto;
+  }
+  .accordion h2,
+  .accordion2 h2 {
+    font-size: 1.75rem;
+  }
+  .faq_h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .faq_p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .background_faq {
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
+    background-position: center;
+  }
+
+  .accordion_container {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.875rem auto;
+    padding: 0.625rem;
+  }
+  .accordion,
+  .accordion2 {
+    width: 95%;
+    padding: 1.25rem 0 0 0;
+    margin: auto;
+  }
+  .accordion h2,
+  .accordion2 h2 {
+    font-size: 1.625rem;
+  }
+  .faq_h3 {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  .faq_p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .background_faq {
+    width: 100%;
+    padding-top: 9.375rem;
+    background-image: url("../../img/fondo_faq.webp");
+    background-size: cover;
+    background-color: black;
+    background-repeat: repeat;
+    background-position: center;
+    padding-bottom: 3.125rem;
+  }
+
+  .accordion_container {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 1.875rem auto;
+    backdrop-filter: blur(1.875rem);
+    padding: 0.625rem;
+    border-radius: 0.9375rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .accordion,
+  .accordion2 {
+    width: 95%;
+    padding: 1.25rem 0 0 0;
+    margin: auto;
+  }
+  .accordion h2,
+  .accordion2 h2 {
+    font-size: 1.5rem;
+  }
+  .faq_h3 {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+  .faq_p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
   }
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Contacto.css";
 
-const Contacto = () => {
+const Contacto = ({ greeting }) => {
   return (
     <section id="contacto" class="contenedor-contacto">
       <form action="">
-        <h1> Contacto</h1>
+        <h1 className="title">{greeting}</h1>
         <div class="informacion">
           <input type="text" id="nombre" placeholder="Nombre" required />
           <input type="text" id="apellido" placeholder="Apellido" required />

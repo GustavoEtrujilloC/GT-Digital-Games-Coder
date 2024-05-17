@@ -1,313 +1,274 @@
 .content {
-    padding-bottom: 3.125rem;
-    margin-top: 9.375rem;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  padding: 6.25rem 0 3.125rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 6.25rem 3.125rem 0 6.25rem;
+}
+.content .gallery__image-container {
+  width: 37.5rem;
+  height: 37.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+}
+.content .gallery__image-container:hover {
+  cursor: pointer;
+}
+.details {
+  padding: 6.25rem 3.125rem 0 3.125rem;
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details__company {
+  align-self: flex-start;
+}
+.details__title {
+  font-size: 2.8125rem;
+  align-self: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.details__description {
+  text-align: justify;
+  font-size: 1.125rem;
+}
+
+.details__prices {
+  margin-top: 3.125rem;
+  width: 100%;
+  display: flex;
+  gap: 3.125rem;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.details__now {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: red;
+}
+
+.details__before {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1400px) {
+  .content {
+    padding: 9.375rem 0 0 0;
+    flex-wrap: nowrap;
+    padding: 4.375rem 0 1.25rem 0;
   }
+
+  .details {
+    width: 80%;
+  }
+
+  .content .gallery__image-container {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 95%;
+  }
+
+  .content {
+    flex-wrap: nowrap;
+    height: 100vh;
+    padding: 3.125rem 0 0.625rem 0;
+  }
+
   .content .gallery {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding: 6.25rem 3.125rem 0 6.25rem;
+    padding: 0.625rem;
   }
   .content .gallery__image-container {
-    width: 37.5rem;
-    height: 37.5rem;
-    border-radius: 1.25rem;
-    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3)
-  }
-  .content .gallery__image-container:hover {
-    cursor: pointer;
+    width: 90%;
+    height: auto;
   }
   .details {
-    padding: 6.25rem 3.125rem 0 6.25rem;
-    width: 50%;
-    margin: auto;
+    width: 90%;
+  }
+
+  .details__prices {
+    width: 100%;
+    margin: 1.875rem auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 9.375rem 0 0 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+  .content .gallery {
+    justify-content: center;
+    padding: 0.625rem;
+  }
+  .content .gallery__image-container {
+    width: 80%;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+  .details {
+    margin-top: 2.1875rem;
+    padding: 0.625rem;
+    width: 70%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   .details__company {
-    align-self: flex-start;
+    font-size: 1.125rem;
+    text-align: center;
   }
   .details__title {
-    font-size: 2.8125rem;
-    align-self: flex-start;
+    font-size: 1.875rem;
+    text-align: center;
     margin-bottom: 2.5rem;
   }
 
   .details__description {
     text-align: justify;
-
+    font-size: 1.125rem;
   }
 
   .details__prices {
-    margin-top: 3.125rem;
     width: 100%;
-    display: flex;
-    gap: 3.125rem;
-    flex-direction: row;
+    margin: 1.875rem auto 0 auto;
     justify-content: center;
-    align-items: center;   
-
   }
 
   .details__now {
     font-size: 1.875rem;
-    font-weight: bold;
-    color: red;
-
   }
 
   .details__before {
     font-size: 1.875rem;
-    font-weight: bold;
-    text-decoration: line-through;
-    opacity: 0.7;
+  }
+}
 
+@media screen and (max-width: 576px) {
+  .content {
+    padding: 9.375rem 0 0 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+  .content .gallery {
+    justify-content: center;
+    padding: 0.625rem;
+  }
+  .content .gallery__image-container {
+    width: 80%;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+  .details {
+    margin-top: 2.1875rem;
+    padding: 0.625rem;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .details__company {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .details__title {
+    font-size: 1.5625rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
   }
 
-
-  @media screen and (min-width: 1400px) {
-
-    .details__description {
-      width: 90%;
-  
-    }
+  .details__description {
+    text-align: justify;
   }
 
-  @media screen and (max-width: 1200px) {
-
-    .content {
-      flex-direction: column;
-    }
-
-    .content .gallery {
-      justify-content: center;
-      padding: .625rem ;
-    }
-    .content .gallery__image-container {
-      width: 60%;
-      height: auto;
-      border-radius: 1.25rem;
-    }
-    .details {
-      margin-top: 2.1875rem;
-      padding: .625rem;
-      width: 60%;      
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .details__company {
-      font-size: 1.125rem;
-      text-align: center;
-    }
-  
-    .details__description {
-      text-align: justify;
-      font-size: 1.125rem;
-  
-    }
-
-    .details__now {
-      font-size: 1.875rem;
-  
-    }
-  
-    .details__before {
-      font-size: 1.875rem;
-  
-    }
-
-    .details__title {
-      font-size: 2.25rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-  
-
-    .details__prices {
-      width: 100%;
-      margin: 1.875rem auto 0 auto;
-      justify-content: center;
-  
-    }
-
-
-
+  .details__prices {
+    width: 100%;
+    margin: 1.875rem auto 0 auto;
+    justify-content: center;
   }
 
-  @media screen and (max-width: 768px) {
-
-    .content {
-      flex-direction: column;
-    }
-    .content .gallery {
-      justify-content: center;
-      padding: .625rem ;
-    }
-    .content .gallery__image-container {
-      width: 80%;
-      height: auto;
-      border-radius: 1.25rem;
-    }
-    .details {
-      margin-top: 2.1875rem;
-      padding: .625rem;
-      width: 70%;      
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .details__company {
-      font-size: 1.125rem;
-      text-align: center;
-    }
-    .details__title {
-      font-size: 1.875rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-  
-    .details__description {
-      text-align: justify;
-      font-size: 1.125rem;
-  
-    }
-
-    .details__prices {
-      width: 100%;
-      margin: 1.875rem auto 0 auto;
-      justify-content: center;
-  
-    }
-
-    .details__now {
-      font-size: 1.875rem;
-  
-    }
-  
-    .details__before {
-      font-size: 1.875rem;
-  
-    }
-
-
+  .details__now {
+    font-size: 1.5625rem;
   }
 
-  @media screen and (max-width: 576px) {
-    .content {
-      flex-direction: column;
-    }
-    .content .gallery {
-      justify-content: center;
-      padding: .625rem ;
-    }
-    .content .gallery__image-container {
-      width: 80%;
-      height: auto;
-      border-radius: 1.25rem;
-    }
-    .details {
-      margin-top: 2.1875rem;
-      padding: .625rem;
-      width: 90%;      
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .details__company {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .details__title {
-      font-size: 1.5625rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-  
-    .details__description {
-      text-align: justify;
-  
-    }
+  .details__before {
+    font-size: 1.5625rem;
+  }
+}
 
-    .details__prices {
-      width: 100%;
-      margin: 1.875rem auto 0 auto;
-      justify-content: center;
-  
-    }
-
-    .details__now {
-      font-size: 1.5625rem;
-  
-    }
-  
-    .details__before {
-      font-size: 1.5625rem;
-  
-    }
-
-
-
+@media screen and (max-width: 320px) {
+  .content {
+    padding: 9.375rem 0 0 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+  .content .gallery {
+    justify-content: center;
+    padding: 0.625rem;
+  }
+  .content .gallery__image-container {
+    width: 80%;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+  .details {
+    margin-top: 2.1875rem;
+    padding: 0.625rem;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .details__company {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .details__title {
+    font-size: 1.5625rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
   }
 
-  @media screen and (max-width: 320px) {
-    .content {
-      flex-direction: column;
-    }
-    .content .gallery {
-      justify-content: center;
-      padding: .625rem ;
-    }
-    .content .gallery__image-container {
-      width: 80%;
-      height: auto;
-      border-radius: 1.25rem;
-    }
-    .details {
-      margin-top: 2.1875rem;
-      padding: .625rem;
-      width: 90%;      
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .details__company {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .details__title {
-      font-size: 1.5625rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-  
-    .details__description {
-      text-align: justify;
-  
-    }
-
-    .details__prices {
-      width: 100%;
-      margin: 1.875rem auto 0 auto;
-      justify-content: center;
-  
-    }
-
-    .details__now {
-      font-size: 1.5625rem;
-  
-    }
-  
-    .details__before {
-      font-size: 1.5625rem;
-  
-    }
-
-    
-  
-    
+  .details__description {
+    text-align: justify;
   }
+
+  .details__prices {
+    width: 100%;
+    margin: 1.875rem auto 0 auto;
+    justify-content: center;
+  }
+
+  .details__now {
+    font-size: 1.5625rem;
+  }
+
+  .details__before {
+    font-size: 1.5625rem;
+  }
+}

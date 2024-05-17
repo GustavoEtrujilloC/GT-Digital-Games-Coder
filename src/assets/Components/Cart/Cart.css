@@ -1,14 +1,27 @@
+.cart_container {
+  padding: 10rem 0 6.25rem 0;
+  height: 100%;
+  width: 100%;
+}
 .emptyCartContainer {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .9375rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9375rem;
 }
 
 .emptyCart {
-    margin-top: 12.5rem;
-    font-size: 1.5625rem;
-    font-weight: bold;
+  margin-top: 12.5rem;
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .cart_container {
+    padding: 9.375rem 0 3.125rem 0;
+    height: 100%;
+    width: 100%;
+  }
 }

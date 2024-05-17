@@ -1,242 +1,196 @@
 .input {
-    margin: 3.75rem 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 9.375rem;
-  
+  margin: 3.75rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 9.375rem;
 }
 
 .inputNumberContainer {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .imgCart {
-    display: flex;
-    align-items: center;
-    margin: .625rem
+  display: flex;
+  align-items: center;
+  margin: 0.625rem;
 }
 
 .input__minus {
-    width: 1.875rem;
-    height: 1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .input__minus:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .input__minus:active {
-    transform: scale(1.15, 1.15);
-    color: #ee8b00;
-
+  transform: scale(1.15, 1.15);
+  color: #ee8b00;
 }
 
 .input__plus {
-    width: 1.875rem;
-    height: 1.875rem;
-
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .input__plus:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .input__plus:active {
-    transform: scale(1.15, 1.15);
-    color: #ee8b00
-
+  transform: scale(1.15, 1.15);
+  color: #ee8b00;
 }
 
 .input__number {
-    text-align: center;
-    border: none;
-    font-size: 1rem;
-    font-weight: 700;
-  
-
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
+.btnCenter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0.9375rem auto;
+}
 
-  .btnCenter {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: .9375rem auto;
+@media screen and (max-width: 1400px) {
+  .input {
+    gap: 2.5rem;
   }
 
-  @media screen and (max-width: 1400px) {
-
-    .input {
-        gap: 2.5rem;
-    }
-
-    .inputNumberContainer {
-        width: 40%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-  }    
-
+  .inputNumberContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 @media screen and (max-width: 1200px) {
-.input {
-margin: 3.75rem 0;
-width: 100%;
-flex-direction: column;
-gap: 1.875rem;
-  
-}
+  .input {
+    margin: 3.75rem 0;
+    width: 100%;
+    gap: 1.875rem;
+  }
 
-.inputNumberContainer {
+  .inputNumberContainer {
     width: 30%;
-}
+  }
 
-
-.input__minus {
+  .input__minus {
     width: 1.25rem;
     height: 1.25rem;
-}
+  }
 
-
-.input__plus {
+  .input__plus {
     width: 1.25rem;
-    height: 1.25rem
-}
+    height: 1.25rem;
+  }
 
-
-.input__number {
+  .input__number {
     text-align: center;
     border: none;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-  
-
-}  
+  }
 }
-
-
 
 @media screen and (max-width: 768px) {
+  .input {
+    margin: 3.75rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
 
-.input {
-margin: 3.75rem 0;
-width: 100%;
-flex-direction: column;
-gap: 1.875rem;
-  
-}
-
-.inputNumberContainer {
+  .inputNumberContainer {
     width: 40%;
-}
+  }
 
-
-.input__minus {
+  .input__minus {
     width: 1.25rem;
     height: 1.25rem;
-}
+  }
 
-
-.input__plus {
+  .input__plus {
     width: 1.25rem;
-    height: 1.25rem
-}
+    height: 1.25rem;
+  }
 
-
-.input__number {
+  .input__number {
     text-align: center;
     border: none;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-  
-
-}  
+  }
 }
 
 @media screen and (max-width: 576px) {
-.input {
-margin: 3.75rem 0;
-width: 100%;
-flex-direction: column;
-gap: 1.875rem;
-  
-}
+  .input {
+    margin: 3.75rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
 
-.inputNumberContainer {
+  .inputNumberContainer {
     width: 40%;
-}
+  }
 
-
-.input__minus {
+  .input__minus {
     width: 1.25rem;
     height: 1.25rem;
-}
+  }
 
-
-.input__plus {
+  .input__plus {
     width: 1.25rem;
-    height: 1.25rem
-}
+    height: 1.25rem;
+  }
 
-
-.input__number {
+  .input__number {
     text-align: center;
     border: none;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-  
-
-}  
-    
+  }
 }
 
 @media screen and (max-width: 320px) {
+  .input {
+    margin: 3.75rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
 
-.input {
-margin: 3.75rem 0;
-width: 100%;
-flex-direction: column;
-gap: 1.875rem;
-  
-}
-
-.inputNumberContainer {
+  .inputNumberContainer {
     width: 40%;
-}
+  }
 
-
-.input__minus {
+  .input__minus {
     width: 1.25rem;
     height: 1.25rem;
-}
+  }
 
-
-.input__plus {
+  .input__plus {
     width: 1.25rem;
-    height: 1.25rem
-}
+    height: 1.25rem;
+  }
 
-
-.input__number {
+  .input__number {
     text-align: center;
     border: none;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-  
-
-}  
- 
-  
+  }
 }
-
-  
-
-
-

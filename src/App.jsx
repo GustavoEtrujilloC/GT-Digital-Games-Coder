@@ -16,6 +16,8 @@ import Faq from "./assets/Components/Faq/Faq";
 import Home from "./assets/Components/Home/Home";
 import Contacto from "./assets/Components/Contacto/Contacto";
 import "./mediaQuerys.css";
+import "@mantine/core/styles.css";
+import { MantineProvider } from "@mantine/core";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,42 +31,42 @@ function App() {
   }, []);
 
   return (
-    <CartProvider>
-      {loading ? (
-        <Loader />
-      ) : (
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <ItemListContainer greeting="Tienda de Juegos Digitales" />
-              }
-            />
-            <Route path="/home" element={<Home />} />
-            <Route
-              path="/categories/:categoryId"
-              element={<ItemListContainer greeting="Categoria:" />}
-            />
-            <Route
-              path="/store"
-              element={
-                <ItemListContainer greeting="Tienda de Juegos Digitales" />
-              }
-            />
-            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/addgames" element={<AddGames />} /> // Solo usar para
-            la actualizacion de Juegos en la base de datos
-          </Routes>
-        </BrowserRouter>
-      )}
-    </CartProvider>
+    <MantineProvider>
+      <CartProvider>
+        {loading ? (
+          <Loader />
+        ) : (
+          <BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/categories/:categoryId"
+                element={<ItemListContainer greeting="Categoria:" />}
+              />
+              <Route
+                path="/store"
+                element={<ItemListContainer greeting="Juegos Digitales" />}
+              />
+              <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route
+                path="/faq"
+                element={<Faq greeting="Preguntas Frecuentes" />}
+              />
+              <Route
+                path="/contacto"
+                element={<Contacto greeting="Contacto" />}
+              />
+              <Route path="/login" element={<Login />} />
+              <Route path="/addgames" element={<AddGames />} /> // Solo usar
+              para la actualizacion de Juegos en la base de datos
+            </Routes>
+          </BrowserRouter>
+        )}
+      </CartProvider>
+    </MantineProvider>
   );
 }
 

@@ -38,7 +38,7 @@ const NavBar = () => {
   }, [prevScrollPos]);
 
   const links = [
-    { to: "/home", text: "Inicio", icon: <IoIosHome className="iconMenu" /> },
+    { to: "/", text: "Inicio", icon: <IoIosHome className="iconMenu" /> },
     {
       to: "/store",
       text: "Tienda",

@@ -1,60 +1,117 @@
 .noselect {
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background: red;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-    background: #e62222;
-   }
-   
-   .noselect, .noselect span {
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.noselect,
+.noselect span {
+  transition: 200ms;
+}
+
+.noselect .text {
+  transform: translateX(25px);
+  color: white;
+  font-weight: bold;
+}
+
+.noselect .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(90px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.noselect:hover {
+  background: #ff3636;
+}
+
+.noselect:hover .text {
+  color: transparent;
+}
+
+.noselect:hover .icon {
+  width: 130px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.noselect:active .icon svg {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 576px) {
+  .noselect {
+    width: 120px;
+    height: 40px;
+  }
+
+  .noselect,
+  .noselect span {
     transition: 200ms;
-   }
-   
-   .noselect .text {
-    transform: translateX(35px);
-    color: white;
-    font-weight: bold;
-   }
-   
-   .noselect .icon {
-    position: absolute;
-    border-left: 1px solid #c41b1b;
-    transform: translateX(110px);
+  }
+
+  .noselect .text {
+    transform: translateX(20px);
+    font-size: 1rem;
+  }
+
+  .noselect .icon {
     height: 40px;
     width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-   
-   .noselect svg {
-    width: 15px;
-    fill: #eee;
-   }
-   
-   .noselect:hover {
-    background: #ff3636;
-   }
-   
-   .noselect:hover .text {
-    color: transparent;
-   }
-   
-   .noselect:hover .icon {
-    width: 150px;
-    border-left: none;
-    transform: translateX(0);
-   }
-   
-   .noselect:focus {
-    outline: none;
-   }
-   
-   .noselect:active .icon svg {
-    transform: scale(0.8);
-   }
+  }
+
+  .noselect svg {
+    width: 10px;
+  }
+
+  .noselect:hover .icon {
+    width: 120px;
+  }
+
+  @media screen and (max-width: 320px) {
+    .noselect {
+      width: 120px;
+      height: 40px;
+    }
+
+    .noselect .text {
+      transform: translateX(20px);
+      font-size: 0.875rem;
+    }
+
+    .noselect .icon {
+      transform: translateX(80px);
+      height: 40px;
+      width: 40px;
+    }
+
+    .noselect svg {
+      width: 10px;
+    }
+
+    .noselect:hover .icon {
+      width: 120px;
+    }
+  }
+}
