@@ -139,4 +139,10 @@
     align-items: center;
     gap: 1.875rem;
   }
+
+  .title_pages {
+    padding-top: 1.25rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }

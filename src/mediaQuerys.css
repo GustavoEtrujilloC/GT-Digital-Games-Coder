@@ -96,7 +96,6 @@
   }
   * {
     font-size: 1rem;
-    max-width: 78.125rem;
   }
   /* Main */
   .contenedor-main {
@@ -484,7 +483,6 @@
   }
   * {
     font-size: 1rem;
-    max-width: 64rem;
   }
   /* Main */
   .contenedor-main {
@@ -897,7 +895,6 @@
 @media (max-width: 768px) {
   * {
     font-size: 1rem;
-    max-width: 48rem;
   }
   #header {
     display: none;
@@ -1320,7 +1317,6 @@
 @media (max-width: 712px) {
   * {
     font-size: 1rem;
-    max-width: 44.5rem;
   }
 
   /* Main */
@@ -1750,7 +1746,6 @@
 @media (max-width: 576px) {
   * {
     font-size: 1rem;
-    max-width: 31.25rem;
   }
   /* Main */
   .contenedor-main {
@@ -2180,7 +2175,6 @@
 @media (max-width: 425px) {
   * {
     font-size: 1rem;
-    max-width: 26.5625rem;
   }
   #header {
     display: none;
@@ -2620,7 +2614,6 @@
 @media (max-width: 375px) {
   * {
     font-size: 1rem;
-    max-width: 23.4375rem;
   }
   #header {
     display: none;
@@ -3057,7 +3050,6 @@
 @media (max-width: 320px) {
   * {
     font-size: 1rem;
-    max-width: 20rem;
   }
   #header {
     display: none;

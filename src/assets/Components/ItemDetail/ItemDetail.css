@@ -43,6 +43,7 @@
 .details__description {
   text-align: justify;
   font-size: 1.125rem;
+  text-justify: inter-word;
 }
 
 .details__prices {
@@ -256,6 +257,7 @@
 
   .details__description {
     text-align: justify;
+    text-justify: inter-word;
   }
 
   .details__prices {
