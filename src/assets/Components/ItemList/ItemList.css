@@ -1,8 +1,8 @@
 .storeContainer {
+  width: 100%;
   position: relative;
-  width: 90%;
   height: auto;
-  padding: 3.125rem 0;
+  padding: 3.125rem 3.125rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-basis: 15%;
   gap: 3.125rem;
 }
 
@@ -122,4 +123,20 @@
 .button_pagination:focus .button-box {
   transition: 0.4s;
   transform: translateX(-56px);
+}
+
+@media screen and (max-width: 576px) {
+  .storeContainer {
+    padding: 3.125rem 0.3125rem;
+    margin: auto;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+  }
 }
