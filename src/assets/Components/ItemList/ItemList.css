@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   height: auto;
-  padding: 3.125rem 3.125rem;
+  padding: 3.125rem 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@
 
 @media screen and (max-width: 576px) {
   .storeContainer {
-    padding: 3.125rem 0.3125rem;
+    padding: 3.125rem 0;
     margin: auto;
   }
 
