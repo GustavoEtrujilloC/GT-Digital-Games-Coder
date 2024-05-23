@@ -3,10 +3,10 @@ import "./Contacto.css";
 
 const Contacto = ({ greeting }) => {
   return (
-    <section id="contacto" class="contenedor-contacto">
+    <section id="contacto" className="contenedor-contacto">
       <form action="">
         <h1 className="title">{greeting}</h1>
-        <div class="informacion">
+        <div className="informacion">
           <input type="text" id="nombre" placeholder="Nombre" required />
           <input type="text" id="apellido" placeholder="Apellido" required />
           <input type="email" id="email" placeholder="Email" required />
@@ -14,11 +14,11 @@ const Contacto = ({ greeting }) => {
           <textarea required name="" id="" cols="30" rows="10">
             Escribe tu mensaje
           </textarea>
-          <div class="button_contacto">
+          <div className="button_contacto">
             <input type="submit" id="button" value="Enviar" required />
           </div>
         </div>
-        <div class="contacto_horario">
+        <div className="contacto_horario">
           <div>
             <h3>telefono</h3>
             <p>555-55-55-55</p>

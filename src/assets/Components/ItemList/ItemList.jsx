@@ -30,13 +30,13 @@ const ItemList = ({ productos }) => {
           length: Math.ceil(productos.length / productsPerPage),
         }).map((_, index) => (
           <button
-            class="button_pagination"
+            className="button_pagination"
             key={index}
             onClick={() => paginate(index + 1)}
           >
-            <div class="button-box">
-              <span class="button-elem">{index + 1}</span>
-              <span class="button-elem_after">{index + 1}</span>
+            <div className="button-box">
+              <span className="button-elem">{index + 1}</span>
+              <span className="button-elem_after">{index + 1}</span>
             </div>
           </button>
         ))}

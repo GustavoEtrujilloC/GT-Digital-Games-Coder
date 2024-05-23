@@ -1,7 +1,7 @@
 .cartViewContainer {
   margin: auto;
   padding: 3.75rem;
-  width: 60%;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  flex-basis: 25%;
+
   gap: 0.3125rem;
 }
 
@@ -44,6 +46,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-basis: 25%;
+
   gap: 0.3125rem;
 }
 
@@ -60,6 +64,7 @@
 .cartItems img {
   width: 10.625rem;
   height: auto;
+  border-radius: 0.9375rem;
 }
 
 .cartItems h2 {
@@ -74,7 +79,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  flex-basis: 25%;
+
   gap: 0.3125rem;
 }
 
@@ -104,13 +111,21 @@
   font-size: 1.5rem;
 }
 
+.cartTotalContainer h3 span {
+  font-size: 1.125rem;
+  background-color: orangered;
+  padding: 0.3125rem;
+  border-radius: 0.625rem;
+  color: ghostwhite;
+}
+
 @media screen and (max-width: 1400px) {
 }
 
 @media screen and (max-width: 1200px) {
   .cartViewContainer {
     padding: 1.875rem 0.625rem;
-    width: 70%;
+    width: 90%;
     gap: 0.3125rem;
   }
 }
@@ -126,7 +141,7 @@
 @media screen and (max-width: 768px) {
   .cartViewContainer {
     padding: 0.625rem 0.3125rem;
-    width: 70%;
+    width: 60%;
     gap: 0.3125rem;
   }
 
@@ -210,7 +225,7 @@
 @media screen and (max-width: 576px) {
   .cartViewContainer {
     padding: 0.625rem 0.3125rem;
-    width: 90%;
+    width: 75%;
     gap: 0.3125rem;
   }
 
@@ -291,6 +306,14 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .cartViewContainer {
+    padding: 0.625rem 0.3125rem;
+    width: 90%;
+    gap: 0.3125rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .cartViewContainer {
     padding: 0.625rem 0.3125rem;
@@ -302,31 +325,6 @@
     font-size: 1.375rem;
   }
 
-  .gameTitleContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.625rem 0;
-    gap: 0.3125rem;
-  }
-
-  .gameQuantityContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.625rem 0;
-    gap: 0.3125rem;
-  }
-
-  .cartItems {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.25rem 0;
-    border-bottom: solid 1px black;
-  }
-
   .cartItems img {
     width: 10rem;
   }
@@ -336,37 +334,20 @@
   }
 
   .cartItems h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     text-align: center;
   }
 
-  .cartPriceContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .cartPriceContainer h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.9375rem;
-  }
-
-  .cartTotalContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.9375rem;
+    font-size: 1.125rem;
   }
 
   .cartTotalContainer h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .button1 {
     font-size: 0.875rem;
-    padding: 0.9rem 1.25rem;
+    padding: 0.625rem 0.9375rem;
   }
 }

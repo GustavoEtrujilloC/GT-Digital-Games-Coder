@@ -9,8 +9,9 @@ import { FaTruckFast } from "react-icons/fa6";
 import { BiSolidDiscount } from "react-icons/bi";
 import { IoMenu } from "react-icons/io5";
 import { FaRegWindowClose, FaUser, FaQuestionCircle } from "react-icons/fa";
+import { MdContactPhone } from "react-icons/md";
 
-const NavBar = () => {
+const NavBar = ({ onClickModal }) => {
   const [menu, setMenu] = useState(true);
 
   const handleClick = () => {
@@ -67,7 +68,7 @@ const NavBar = () => {
     {
       to: "/contacto",
       text: "Contacto",
-      icon: <FaUser className="iconMenu" />,
+      icon: <MdContactPhone className="iconMenu" />,
     },
 
     { to: "/login", text: "Login", icon: <FaUser className="iconMenu" /> },
@@ -94,10 +95,9 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-        <div className="CartWidget">
-          <NavLink to="/cart">
-            <CartWidget />
-          </NavLink>
+        <div className="CartWidget" onClick={onClickModal}>
+          <CartWidget onClickModal={onClickModal} />
+
           <i className="menuIcon" onClick={handleClick}>
             {menu ? (
               <IoMenu className="menuIconO" color="#f4f4f4" />

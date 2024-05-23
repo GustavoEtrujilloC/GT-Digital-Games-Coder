@@ -8,20 +8,20 @@ import { ImInfinite } from "react-icons/im";
 const Home = () => {
   return (
     <>
-      <section id="principal" class="contenedor-main">
-        <div class="carrousel_h1">
-          <div class="pre">
+      <section id="principal" className="contenedor-main">
+        <div className="carrousel_h1">
+          <div className="pre">
             <h1>Juegos digitales para</h1>
           </div>
-          <div class="out">
-            <div class="inner">
-              <div class="element">
+          <div className="out">
+            <div className="inner">
+              <div className="element">
                 <h1>PlayStation 4</h1>
               </div>
-              <div class="element">
+              <div className="element">
                 <h1>PlayStation 5</h1>
               </div>
-              <div class="element">
+              <div className="element">
                 <h1>PlayStation 4</h1>
               </div>
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
         <div>
           <a href="./pages/store.html">
             <img
-              class="imgMenu imgMenu-1"
+              className="imgMenu imgMenu-1"
               src="./assets/img/tienda.png"
               alt="store"
             />
@@ -39,7 +39,7 @@ const Home = () => {
         <div>
           <a href="./pages/ps4.html">
             <img
-              class="imgMenu imgMenu-2"
+              className="imgMenu imgMenu-2"
               src="./assets/img/ps4.png"
               alt="playstation-4"
             />
@@ -48,7 +48,7 @@ const Home = () => {
         <div>
           <a href="./pages/ps5.html">
             <img
-              class="imgMenu imgMenu-3"
+              className="imgMenu imgMenu-3"
               src="./assets/img/ps5.png"
               alt="playstation-5"
             />
@@ -57,31 +57,31 @@ const Home = () => {
         <div>
           <a href="#">
             <img
-              class="imgMenu imgMenu-4"
+              className="imgMenu imgMenu-4"
               src="./assets/img/preventa.png"
               alt="preventa"
             />
           </a>
         </div>
-        <div class="contenedor-columnaImgLateral">
+        <div className="contenedor-columnaImgLateral">
           <a href="#">
             <img
-              class="imgMenuLateral imgMenu1-1"
+              className="imgMenuLateral imgMenu1-1"
               src="./assets/img/novedades.png"
               alt="novedades"
             />
           </a>
           <a href="./pages/faq.html">
             <img
-              class="imgMenuLateral imgMenu1-2"
+              className="imgMenuLateral imgMenu1-2"
               src="./assets/img/faq.png"
               alt="preguntas-frecuentes"
             />
           </a>
         </div>
       </section>
-      <section id="service" class="contenedor-service">
-        <div class="service">
+      <section id="service" className="contenedor-service">
+        <div className="service">
           <FaEarthAmericas fontSize={125} />
           <h2>ENTREGA INMEDIATA</h2>
           <p>
@@ -89,14 +89,14 @@ const Home = () => {
             forma segura y eficiente.
           </p>
         </div>
-        <div class="service">
+        <div className="service">
           <MdDiscount fontSize={125} />
           <h2>OFERTAS</h2>
           <p>
             Nuestras entregas son tramitadas luego de la comprobación de pago.
           </p>
         </div>
-        <div class="service">
+        <div className="service">
           <FaShieldAlt fontSize={125} />
           <h2>PAGO SEGURO</h2>
           <p>
@@ -104,7 +104,7 @@ const Home = () => {
             sociales o registrarte en nuestro Newsletter, te enteraras de todo!
           </p>
         </div>
-        <div class="service">
+        <div className="service">
           <ImInfinite fontSize={125} />
           <h2>GARANTIA</h2>
           <p>
@@ -113,8 +113,8 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section id="newsletter" class="contenedor-newsletter">
-        <div class="contenedor_form">
+      <section id="newsletter" className="contenedor-newsletter">
+        <div className="contenedor_form">
           <div>
             <h2>Newsletter</h2>
             <p>
@@ -125,14 +125,14 @@ const Home = () => {
           <div>
             <form action="">
               <input
-                class="imput-name"
+                className="imput-name"
                 type="name"
                 name="Nombre"
                 placeholder="Nombre"
                 required
               />
               <input
-                class="imput-email"
+                className="imput-email"
                 type="email"
                 name="correo electronico"
                 placeholder="Email"

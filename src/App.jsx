@@ -17,7 +17,10 @@ import Home from "./assets/Components/Home/Home";
 import Contacto from "./assets/Components/Contacto/Contacto";
 import "./mediaQuerys.css";
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import { Affix, MantineProvider } from "@mantine/core";
+import Footer from "./assets/Components/Footer/Footer";
+import AffixButton from "./assets/Components/AffixButton/AffixButton";
+import ModalCart from "./assets/Components/ModalCart/ModalCart";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +54,7 @@ function App() {
               <Route path="/item/:itemId" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/ModalCart" element={<ModalCart />} />
               <Route
                 path="/faq"
                 element={<Faq greeting="Preguntas Frecuentes" />}
@@ -63,6 +67,8 @@ function App() {
               <Route path="/addgames" element={<AddGames />} /> // Solo usar
               para la actualizacion de Juegos en la base de datos
             </Routes>
+            <Footer />
+            <AffixButton />
           </BrowserRouter>
         )}
       </CartProvider>
