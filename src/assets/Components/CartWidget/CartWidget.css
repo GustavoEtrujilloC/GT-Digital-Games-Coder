@@ -39,6 +39,10 @@
   font-size: 1.125rem;
 }
 
+.drawner_css {
+  background-color: black;
+}
+
 @media screen and (max-width: 1200) {
   .CartWidget {
     flex-grow: 0;

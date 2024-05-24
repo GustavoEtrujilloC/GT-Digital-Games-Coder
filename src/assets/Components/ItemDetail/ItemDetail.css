@@ -1,6 +1,6 @@
 .content {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 6.25rem 0 3.125rem 0;
   display: flex;
   flex-direction: row;
@@ -226,7 +226,6 @@
     padding: 9.375rem 0 0 0;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 100%;
   }
   .content .gallery {
     justify-content: center;

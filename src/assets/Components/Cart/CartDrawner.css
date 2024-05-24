@@ -1,0 +1,145 @@
+.cart_container_drawner {
+  height: 100%;
+  width: 100%;
+}
+.emptyCartContainer_drawner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9375rem;
+}
+
+.emptyCart_drawner {
+  margin-top: 12.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cartViewContainer_drawner {
+  margin: auto;
+  padding: 3.125rem 0.3125rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.9375rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  gap: 0.9375rem;
+}
+
+.mapContainer_drawner {
+  width: 100%;
+}
+
+.cartTitle_drawner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.625rem;
+  border-bottom: solid 1px black;
+}
+
+.cartTitle_drawner h2 {
+  font-size: 1.5625rem;
+  padding: 0 0.625rem;
+}
+
+.gameTitleContainer_drawner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+
+  gap: 0.3125rem;
+}
+
+.gameQuantityContainer_drawner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+
+  gap: 0.3125rem;
+}
+
+.cartItems_drawner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem;
+  border-bottom: solid 1px black;
+}
+
+.cartItems_drawner img {
+  width: 10.625rem;
+  height: auto;
+  border-radius: 0.9375rem;
+}
+
+.cartItems_drawner h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cartItems_drawner h3 {
+  font-size: 1.5625rem;
+  text-align: center;
+}
+
+.cartPriceContainer_drawner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+
+  gap: 0.3125rem;
+}
+
+.cartPriceContainer_drawner h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+
+.cartPriceContainer_drawner h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.cartPriceContainer_drawner .Buttom1 {
+  background-color: black;
+}
+
+.cartTotalContainer_drawner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+}
+
+.cartTotalContainer_drawner h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cartTotalContainer_drawner h3 span {
+  font-size: 1.125rem;
+  background-color: orangered;
+  padding: 0.3125rem;
+  border-radius: 0.625rem;
+  color: ghostwhite;
+}

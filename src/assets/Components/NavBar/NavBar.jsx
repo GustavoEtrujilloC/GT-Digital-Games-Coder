@@ -11,7 +11,7 @@ import { IoMenu } from "react-icons/io5";
 import { FaRegWindowClose, FaUser, FaQuestionCircle } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 
-const NavBar = ({ onClickModal }) => {
+const NavBar = () => {
   const [menu, setMenu] = useState(true);
 
   const handleClick = () => {
@@ -95,8 +95,8 @@ const NavBar = ({ onClickModal }) => {
             ))}
           </ul>
         </nav>
-        <div className="CartWidget" onClick={onClickModal}>
-          <CartWidget onClickModal={onClickModal} />
+        <div className="CartWidget">
+          <CartWidget />
 
           <i className="menuIcon" onClick={handleClick}>
             {menu ? (
