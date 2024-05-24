@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { FaCircle } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { useDisclosure } from "@mantine/hooks";
-import { Drawer, Button } from "@mantine/core";
-import CartDrawner from "../Cart/CartDrawner";
+import { Drawer } from "@mantine/core";
+import CartDrawer from "../Cart/CartDrawer";
 
 const CartWidget = ({}) => {
   const { cartQuantity } = useContext(CartContext);
@@ -27,15 +27,8 @@ const CartWidget = ({}) => {
         </div>
       </div>
 
-      <Drawer
-        opened={opened}
-        onClose={close}
-        size="85%"
-        offset={8}
-        radius="md"
-        position="bottom"
-      >
-        <CartDrawner onClick={close} />
+      <Drawer opened={opened} onClose={close} size="90%" position="bottom">
+        <CartDrawer />
       </Drawer>
     </>
   );

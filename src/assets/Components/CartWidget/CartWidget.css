@@ -19,6 +19,10 @@
   margin-left: 0;
 }
 
+.shoppingCart:hover {
+  cursor: pointer;
+}
+
 .shoppingBadge {
   color: red;
   font-size: 1.5625rem;
@@ -29,6 +33,10 @@
   transform: translate(50%, -50%);
 }
 
+.shoppingBadge:hover {
+  cursor: pointer;
+}
+
 .itemsNumber {
   position: absolute;
   top: 30%;
@@ -37,10 +45,6 @@
   z-index: 1;
   color: white;
   font-size: 1.125rem;
-}
-
-.drawner_css {
-  background-color: black;
 }
 
 @media screen and (max-width: 1200) {

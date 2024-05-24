@@ -1,20 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { useDisclosure } from "@mantine/hooks";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
   const [cart, setCart] = useState(savedCart);
-  const { open, close, isOpen } = useDisclosure();
-
-  const openDrawer = () => {
-    open();
-  };
-
-  const closeDrawer = () => {
-    close();
-  };
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -69,9 +59,6 @@ export const CartProvider = ({ children }) => {
         isInCart,
         cartQuantity,
         totalBuy,
-        openDrawer,
-        closeDrawer,
-        isDrawerOpen: isOpen,
       }}
     >
       {children}

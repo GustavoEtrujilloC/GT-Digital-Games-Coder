@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
-import CartViewDrawner from "../CartView/CartViewDrawner";
+import CartView from "../CartView/CartView";
 import { CartContext } from "../../../context/CartContext";
-import "../Cart/CartDrawner.css";
+import "../Cart/Cart.css";
 import { TbShoppingBagX } from "react-icons/tb";
 import Button1 from "../Buttons/Button1";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+const CartDrawer = () => {
   const { cart } = useContext(CartContext);
 
   return (
-    <section className="cart_container_drawner">
+    <section className="cart_container_drawer">
       {!cart.length ? (
-        <div className="emptyCartContainer_drawner">
-          <p className="emptyCart_drawner">
+        <div className="emptyCartContainer">
+          <p className="emptyCart">
             {" "}
             El carrito esta vacio <TbShoppingBagX fontSize={40} />{" "}
           </p>
@@ -22,10 +22,10 @@ const Cart = () => {
           </Link>
         </div>
       ) : (
-        <CartViewDrawner />
+        <CartView />
       )}
     </section>
   );
 };
 
-export default Cart;
+export default CartDrawer;
