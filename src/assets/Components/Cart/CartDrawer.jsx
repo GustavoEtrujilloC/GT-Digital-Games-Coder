@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import CartView from "../CartView/CartView";
-import { CartContext } from "../../../Context/CartContext";
+import { CartContext } from "../../../context/CartContext";
 import "../Cart/Cart.css";
 import { TbShoppingBagX } from "react-icons/tb";
 import Button1 from "../Buttons/Button1";
