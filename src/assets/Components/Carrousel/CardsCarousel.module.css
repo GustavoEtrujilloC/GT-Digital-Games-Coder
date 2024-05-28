@@ -1,0 +1,35 @@
+.cardcarousel {
+  position: relative;
+  width: 100%;
+  height: rem(440px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardcarousel:hover {
+  cursor: pointer;
+}
+
+.buy_buttom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+  position: absolute;
+  bottom: 5%;
+}
+
+.carousel_price {
+  background-color: orange;
+  text-align: center;
+  width: 40%;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  text-shadow: 0.125rem 0.125rem black;
+  color: ghostwhite;
+  font-size: 1.25rem;
+}

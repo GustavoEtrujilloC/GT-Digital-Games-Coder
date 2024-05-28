@@ -4,81 +4,13 @@ import { FaEarthAmericas } from "react-icons/fa6";
 import { MdDiscount } from "react-icons/md";
 import { FaShieldAlt } from "react-icons/fa";
 import { ImInfinite } from "react-icons/im";
+import CardsCarousel from "../Carrousel/CardsCarousel";
 
 const Home = () => {
   return (
     <>
       <section id="principal" className="contenedor-main">
-        <div className="carrousel_h1">
-          <div className="pre">
-            <h1>Juegos digitales para</h1>
-          </div>
-          <div className="out">
-            <div className="inner">
-              <div className="element">
-                <h1>PlayStation 4</h1>
-              </div>
-              <div className="element">
-                <h1>PlayStation 5</h1>
-              </div>
-              <div className="element">
-                <h1>PlayStation 4</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <a href="./pages/store.html">
-            <img
-              className="imgMenu imgMenu-1"
-              src="./assets/img/tienda.png"
-              alt="store"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="./pages/ps4.html">
-            <img
-              className="imgMenu imgMenu-2"
-              src="./assets/img/ps4.png"
-              alt="playstation-4"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="./pages/ps5.html">
-            <img
-              className="imgMenu imgMenu-3"
-              src="./assets/img/ps5.png"
-              alt="playstation-5"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <img
-              className="imgMenu imgMenu-4"
-              src="./assets/img/preventa.png"
-              alt="preventa"
-            />
-          </a>
-        </div>
-        <div className="contenedor-columnaImgLateral">
-          <a href="#">
-            <img
-              className="imgMenuLateral imgMenu1-1"
-              src="./assets/img/novedades.png"
-              alt="novedades"
-            />
-          </a>
-          <a href="./pages/faq.html">
-            <img
-              className="imgMenuLateral imgMenu1-2"
-              src="./assets/img/faq.png"
-              alt="preguntas-frecuentes"
-            />
-          </a>
-        </div>
+        <CardsCarousel />
       </section>
       <section id="service" className="contenedor-service">
         <div className="service">

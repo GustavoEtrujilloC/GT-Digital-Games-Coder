@@ -6,7 +6,7 @@ import "./assets/Components/ItemCount/ItemCount.css";
 import ItemListContainer from "./assets/Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./assets/Components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./Context/CartContext";
 import Checkout from "./assets/Components/Checkout/Checkout";
 import AddGames from "../AddGames/AddGames";
 import Loader from "./assets/Components/Loader/Loader";
@@ -17,9 +17,13 @@ import Home from "./assets/Components/Home/Home";
 import Contacto from "./assets/Components/Contacto/Contacto";
 import "./mediaQuerys.css";
 import "@mantine/core/styles.css";
-import { Affix, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import Footer from "./assets/Components/Footer/Footer";
 import AffixButton from "./assets/Components/AffixButton/AffixButton";
+import "@mantine/carousel/styles.css";
+import "@mantine/notifications/styles.css";
+import { ProductProvider } from "./Context/ProductosContext";
+import { Notifications } from "@mantine/notifications";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,42 +38,45 @@ function App() {
 
   return (
     <MantineProvider>
-      <CartProvider>
-        {loading ? (
-          <Loader />
-        ) : (
-          <BrowserRouter>
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path="/categories/:categoryId"
-                element={<ItemListContainer greeting="Categoria:" />}
-              />
-              <Route
-                path="/store"
-                element={<ItemListContainer greeting="Juegos Digitales" />}
-              />
-              <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route
-                path="/faq"
-                element={<Faq greeting="Preguntas Frecuentes" />}
-              />
-              <Route
-                path="/contacto"
-                element={<Contacto greeting="Contacto" />}
-              />
-              <Route path="/login" element={<Login />} />
-              <Route path="/addgames" element={<AddGames />} /> // Solo usar
-              para la actualizacion de Juegos en la base de datos
-            </Routes>
-            <Footer />
-            <AffixButton />
-          </BrowserRouter>
-        )}
-      </CartProvider>
+      <Notifications />
+      <ProductProvider>
+        <CartProvider>
+          {loading ? (
+            <Loader />
+          ) : (
+            <BrowserRouter>
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                  path="/categories/:categoryId"
+                  element={<ItemListContainer greeting="Categoria:" />}
+                />
+                <Route
+                  path="/store"
+                  element={<ItemListContainer greeting="Juegos Digitales" />}
+                />
+                <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route
+                  path="/faq"
+                  element={<Faq greeting="Preguntas Frecuentes" />}
+                />
+                <Route
+                  path="/contacto"
+                  element={<Contacto greeting="Contacto" />}
+                />
+                <Route path="/login" element={<Login />} />
+                <Route path="/addgames" element={<AddGames />} /> // Solo usar
+                para la actualizacion de Juegos en la base de datos
+              </Routes>
+              <Footer />
+              <AffixButton />
+            </BrowserRouter>
+          )}
+        </CartProvider>
+      </ProductProvider>
     </MantineProvider>
   );
 }

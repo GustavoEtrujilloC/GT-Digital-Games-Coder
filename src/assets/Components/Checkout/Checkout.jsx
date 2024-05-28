@@ -9,7 +9,7 @@ import {
 import "../Checkout/Checkout.css";
 import { useContext, useState } from "react";
 import { db } from "../../../Services/firebase";
-import { CartContext } from "../../../context/CartContext";
+import { CartContext } from "../../../Context/CartContext";
 import { Link } from "react-router-dom";
 import Button1 from "../Buttons/Button1";
 import { LiaFileInvoiceSolid } from "react-icons/lia";

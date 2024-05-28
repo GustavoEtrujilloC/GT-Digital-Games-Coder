@@ -1,10 +1,4 @@
 @media (max-width: 1440px) {
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 2.1875rem;
-    margin-bottom: 3.125rem;
-  }
   .carrousel_h1 {
     padding: 0;
     height: 9.375rem;
@@ -98,35 +92,6 @@
     font-size: 1rem;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 0.625rem;
-    gap: 0.9375rem;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 2.75rem;
-    margin-bottom: 3.125rem;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 9.375rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 50%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 2vh;
-  }
   @keyframes rotate_h1 {
     0% {
       transform: translateY(0);
@@ -485,35 +450,7 @@
     font-size: 1rem;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 0.625rem;
-    gap: 0.9375rem;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 2.75rem;
-    margin-bottom: 3.125rem;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 9.375rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 50%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 2vh;
-  }
+
   @keyframes rotate_h1 {
     0% {
       transform: translateY(0);
@@ -909,35 +846,7 @@
     height: 3.75rem;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 0.625rem;
-    gap: 0.9375rem;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 2.1875rem;
-    margin-bottom: 3.125rem;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 9.375rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 50%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 2vh;
-  }
+
   @keyframes rotate_h1 {
     0% {
       transform: translateY(0);
@@ -1320,38 +1229,7 @@
   }
 
   /* Main */
-  .contenedor-main {
-    padding: 5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 1.875rem;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 1.5625rem;
-    margin-bottom: 0;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 6.25rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 50%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 2vh;
-  }
+
   @keyframes rotate_h1 {
     0% {
       transform: translateY(0);
@@ -1748,38 +1626,7 @@
     font-size: 1rem;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 1.875rem;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 1.125rem;
-    margin-bottom: 0;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 6.25rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 50%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 2vh;
-  }
+
   @keyframes rotate_h1 {
     0% {
       transform: translateY(0);
@@ -2183,36 +2030,7 @@
     display: block;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 3.125rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 100%;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 7vh;
-  }
+
   @keyframes rotate_h1 {
     0%,
     50% {
@@ -2622,48 +2440,7 @@
     display: block;
   }
   /* Main */
-  .contenedor-main {
-    padding: 5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-  }
-  .contenedor-main h1 {
-    padding: 1.25rem 0 0.625rem 0;
-    font-weight: 700;
-    font-size: 0.875rem;
-    margin-bottom: 0;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 3.125rem;
-    font-size: 0.875rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 7vh;
-  }
-  @keyframes rotate_h1 {
-    0%,
-    50% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(-100px);
-    }
-  }
+
   .imgMenu {
     margin: 0;
     max-width: 9.0625rem;
@@ -3058,43 +2835,7 @@
     display: block;
   }
   /* Main */
-  .contenedor-main {
-    padding: 4.375rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-  }
-  .carrousel_h1 {
-    padding: 0;
-    height: 5rem;
-    font-size: 1.125rem;
-  }
-  .carrousel_h1 .pre {
-    padding: 0;
-  }
-  .carrousel_h1 .out {
-    padding: 0;
-    height: 6vh;
-  }
-  .carrousel_h1 .out .inner {
-    margin-left: 0.5rem;
-    height: 7vh;
-  }
-  @keyframes rotate_h1 {
-    0%,
-    50% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(-100px);
-    }
-  }
+
   .imgMenu {
     margin: 0;
     max-width: 8.4375rem;

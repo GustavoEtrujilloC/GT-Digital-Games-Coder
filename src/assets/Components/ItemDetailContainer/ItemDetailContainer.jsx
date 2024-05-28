@@ -7,6 +7,7 @@ import { db } from "../../../Services/firebase.js";
 import Loader from "../Loader/Loader";
 import "./ItemDetailContainer.css";
 import { BiSolidMessageAltError } from "react-icons/bi";
+import CardsCarousel from "../Carrousel/CardsCarousel.jsx";
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { CartContext } from "../../../context/CartContext";
+import { CartContext } from "../../../Context/CartContext";
 import { Link } from "react-router-dom";
 import Button1 from "../Buttons/Button1";
 import ButtonX from "../Buttons/ButtonX";
 import "../CartView/CartView.css";
 import { RiShoppingCartLine } from "react-icons/ri";
 
-const CartView = () => {
+const CartView = (opened, close) => {
   const { cart, removeItem, totalBuy, clearCart } = useContext(CartContext);
 
   return (
@@ -34,7 +34,7 @@ const CartView = () => {
               <h2>Precio</h2>
               <h3>{buy.price}$</h3>
               <ButtonX onClick={() => removeItem(buy.id)}>
-                <span className="text">Delete</span>
+                <span className="text">Quitar</span>
               </ButtonX>
             </div>
           </div>
@@ -45,12 +45,12 @@ const CartView = () => {
           Precio Total: <span>{totalBuy()}$</span>
         </h3>
         <Link to="/Checkout">
-          <Button1>
+          <Button1 onClick={close}>
             <RiShoppingCartLine color="white" /> Finalizar Compra
           </Button1>
         </Link>
         <Link to="/Store">
-          <Button1>Seguir comprando</Button1>
+          <Button1 onClick={close}>Seguir comprando</Button1>
         </Link>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import "../CartWidget/CartWidget.css";
-import { CartContext } from "../../../context/CartContext";
+import { CartContext } from "../../../Context/CartContext";
 import { useContext } from "react";
 import { FaCircle } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
@@ -27,8 +27,8 @@ const CartWidget = ({}) => {
         </div>
       </div>
 
-      <Drawer opened={opened} onClose={close} size="90%" position="bottom">
-        <CartDrawer />
+      <Drawer opened={opened} onClose={close} size="80%" position="bottom">
+        <CartDrawer opened={opened} onClose={close} />
       </Drawer>
     </>
   );
