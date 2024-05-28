@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { Paper, useMantineTheme } from "@mantine/core";
 import classes from "./CardsCarousel.module.css";
 import Button1 from "../Buttons/Button1";
-import { useProducts } from "../../../Context/ProductosContext";
+import { useProducts } from "../../../context/ProductosContext";
 import { Link } from "react-router-dom";
 import "./CardsCarousel.module.css";
 

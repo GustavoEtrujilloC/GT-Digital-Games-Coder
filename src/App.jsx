@@ -1,14 +1,13 @@
 import "./App.css";
 import "../reset.css";
-import NavBar from "/src/assets/Components/NavBar/NavBar";
+import NavBar from "./assets/Components/NavBar/NavBar";
 import Cart from "./assets/Components/Cart/Cart";
 import "./assets/Components/ItemCount/ItemCount.css";
 import ItemListContainer from "./assets/Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./assets/Components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartProvider } from "./Context/CartContext";
+import { CartProvider } from "./context/CartContext";
 import Checkout from "./assets/Components/Checkout/Checkout";
-import AddGames from "../AddGames/AddGames";
 import Loader from "./assets/Components/Loader/Loader";
 import { useState, useEffect } from "react";
 import Login from "./assets/Components/Login/Login";
@@ -22,7 +21,7 @@ import Footer from "./assets/Components/Footer/Footer";
 import AffixButton from "./assets/Components/AffixButton/AffixButton";
 import "@mantine/carousel/styles.css";
 import "@mantine/notifications/styles.css";
-import { ProductProvider } from "./Context/ProductosContext";
+import { ProductProvider } from "./context/ProductosContext";
 import { Notifications } from "@mantine/notifications";
 
 function App() {
@@ -68,8 +67,6 @@ function App() {
                   element={<Contacto greeting="Contacto" />}
                 />
                 <Route path="/login" element={<Login />} />
-                <Route path="/addgames" element={<AddGames />} /> // Solo usar
-                para la actualizacion de Juegos en la base de datos
               </Routes>
               <Footer />
               <AffixButton />

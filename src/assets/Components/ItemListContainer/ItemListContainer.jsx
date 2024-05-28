@@ -2,7 +2,7 @@ import ItemList from "../../Components/ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import "../ItemListContainer/ItemListContainer.css";
-import { useProducts } from "../../../Context/ProductosContext";
+import { useProducts } from "../../../context/ProductosContext";
 function ItemListContainer({ greeting }) {
   const { productos, loading } = useProducts();
   const { categoryId } = useParams();
