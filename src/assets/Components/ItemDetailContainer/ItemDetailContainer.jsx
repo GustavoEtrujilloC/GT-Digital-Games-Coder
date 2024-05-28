@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "../../../mock/fakeApi.js";
 import ItemDetail from "../ItemDetail/ItemDetail.jsx";
 import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
@@ -7,7 +6,6 @@ import { db } from "../../../Services/firebase.js";
 import Loader from "../Loader/Loader";
 import "./ItemDetailContainer.css";
 import { BiSolidMessageAltError } from "react-icons/bi";
-import CardsCarousel from "../Carrousel/CardsCarousel.jsx";
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});

@@ -1,5 +1,5 @@
 import "../CartWidget/CartWidget.css";
-import { CartContext } from "../../../Context/CartContext";
+import { CartContext } from "../../../context/CartContext";
 import { useContext } from "react";
 import { FaCircle } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
