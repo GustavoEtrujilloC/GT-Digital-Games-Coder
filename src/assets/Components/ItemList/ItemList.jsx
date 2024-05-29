@@ -4,7 +4,7 @@ import "../ItemList/ItemList.css";
 
 const ItemList = ({ productos }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8;
+  const productsPerPage = 20;
 
   // Calcular los índices de los productos a mostrar en la página actual
   const indexOfLastProduct = currentPage * productsPerPage;

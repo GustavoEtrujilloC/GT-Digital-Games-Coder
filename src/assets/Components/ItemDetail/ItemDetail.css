@@ -19,6 +19,7 @@
   height: 37.5rem;
   border-radius: 1.25rem;
   box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  object-fit: cover;
 }
 .content .gallery__image-container:hover {
   cursor: pointer;

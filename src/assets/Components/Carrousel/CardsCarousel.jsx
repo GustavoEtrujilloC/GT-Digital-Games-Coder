@@ -15,7 +15,7 @@ function CardsCarousel() {
   const slides = productos.map((item, id) => {
     return (
       <Carousel.Slide key={id}>
-        <Card id={item.id} price={item.price} image={item.image} />
+        <Card id={item.id} price={item.Precio} image={item.Imagen} />
       </Carousel.Slide>
     );
   });

@@ -21,24 +21,24 @@ const ItemDetail = ({ producto }) => {
       alert("Debes seleccionar una cantidad");
     }
   };
-
+  console.log(producto);
   return (
     <section className="content">
       <article className="gallery">
-        <img className="gallery__image-container" src={producto.image}></img>
+        <img className="gallery__image-container" src={producto.Imagen}></img>\
       </article>
       <article className="details">
-        <h2 className="details__company">{producto.company}</h2>
-        <h2 className="details__title">{producto.name}</h2>
+        <h2 className="details__company">{producto.Publisher}</h2>
+        <h2 className="details__title">{producto.Titulo}</h2>
         <p className="details__description">{producto.description}</p>
         <div className="details__prices">
           <div>
             <p>Antes</p>
-            <p className="details__before">{producto.price}$</p>
+            <p className="details__before">{producto.PrecioOriginal}$</p>
           </div>
           <div>
             <p>Ahora</p>
-            <p className="details__now">{producto.price}$</p>
+            <p className="details__now">{producto.Precio}$</p>
           </div>
         </div>
         {buy ? (
@@ -49,7 +49,7 @@ const ItemDetail = ({ producto }) => {
           </div>
         ) : (
           <ItemCount
-            producto={producto.name}
+            producto={producto.Titulo}
             stock={producto.stock}
             onAdd={onAdd}
           />
