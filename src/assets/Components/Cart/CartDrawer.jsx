@@ -6,7 +6,7 @@ import { TbShoppingBagX } from "react-icons/tb";
 import Button1 from "../Buttons/Button1";
 import { Link } from "react-router-dom";
 
-const CartDrawer = (opened, close) => {
+const CartDrawer = ({ opened, close }) => {
   const { cart } = useContext(CartContext);
 
   return (
@@ -22,7 +22,7 @@ const CartDrawer = (opened, close) => {
           </Link>
         </div>
       ) : (
-        <CartView opened={opened} onClose={close} />
+        <CartView opened={opened} close={close} />
       )}
     </section>
   );

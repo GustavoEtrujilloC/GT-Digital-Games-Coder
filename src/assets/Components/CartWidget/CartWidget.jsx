@@ -28,7 +28,7 @@ const CartWidget = ({}) => {
       </div>
 
       <Drawer opened={opened} onClose={close} size="80%" position="bottom">
-        <CartDrawer opened={opened} onClose={close} />
+        <CartDrawer opened={opened} close={close} />
       </Drawer>
     </>
   );

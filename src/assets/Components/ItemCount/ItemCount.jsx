@@ -24,6 +24,10 @@ const ItemCount = ({ stock, onAdd, producto }) => {
       count,
       notifications.show({
         title: "Carrito",
+        color: "orange",
+        autoClose: 5000,
+        style: { fontWeight: "bold", color: "black" },
+
         message: `"Agregaste ${producto} al carrito "`,
       })
     );

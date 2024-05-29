@@ -6,7 +6,7 @@ import ButtonX from "../Buttons/ButtonX";
 import "../CartView/CartView.css";
 import { RiShoppingCartLine } from "react-icons/ri";
 
-const CartView = (opened, close) => {
+const CartView = ({ opened, close }) => {
   const { cart, removeItem, totalBuy, clearCart } = useContext(CartContext);
 
   return (

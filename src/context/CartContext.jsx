@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { notifications } from "@mantine/notifications";
 
 export const CartContext = createContext();
 
@@ -30,7 +31,16 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeItem = (itemId) => {
-    setCart(cart.filter((buy) => buy.id !== itemId));
+    const removedItem = cart.find((buy) => buy.id === itemId);
+    const updatedCart = cart.filter((buy) => buy.id !== itemId);
+    setCart(updatedCart);
+    notifications.show({
+      title: "Carrito",
+      autoClose: 5000,
+      style: { fontWeight: "bold", color: "black" },
+      color: "red",
+      message: `Eliminaste ${removedItem.name} del carrito`,
+    });
   };
 
   const isInCart = (itemId) => {
@@ -44,7 +54,9 @@ export const CartProvider = ({ children }) => {
   // Total buy
 
   const totalBuy = () => {
-    return cart.reduce((acc, buy) => (acc += buy.price * buy.quantity), 0);
+    return parseFloat(
+      cart.reduce((acc, buy) => acc + buy.price * buy.quantity, 0).toFixed(2)
+    );
   };
 
   return (
