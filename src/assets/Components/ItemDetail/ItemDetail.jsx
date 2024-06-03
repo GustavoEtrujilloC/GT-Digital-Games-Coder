@@ -21,25 +21,33 @@ const ItemDetail = ({ producto }) => {
       alert("Debes seleccionar una cantidad");
     }
   };
-  console.log(producto);
   return (
     <section className="content">
       <article className="gallery">
-        <img className="gallery__image-container" src={producto.Imagen}></img>\
+        <img
+          className="gallery__image-container"
+          src={producto.imagenPortada}
+        ></img>
+        \
       </article>
       <article className="details">
-        <h2 className="details__company">{producto.Publisher}</h2>
-        <h2 className="details__title">{producto.Titulo}</h2>
-        <p className="details__description">{producto.description}</p>
+        <div className="details_date_container">
+          <h4>Fecha de Salida: {producto.salida}</h4>
+          <h4>Plataforma: {producto.plataforma}</h4>
+        </div>
+        <h2 className="details__company">{producto.desarrollador}</h2>
+        <h2 className="details__title">{producto.titulo}</h2>
+        <p className="details__description">{producto.descripcion}</p>
         <div className="details__prices">
           <div>
             <p>Antes</p>
-            <p className="details__before">{producto.PrecioOriginal}$</p>
+            <p className="details__before">{producto.precioOriginal}$</p>
           </div>
           <div>
             <p>Ahora</p>
-            <p className="details__now">{producto.Precio}$</p>
+            <p className="details__now">{producto.precio}$</p>
           </div>
+          <p>{producto.finOferta}</p>
         </div>
         {buy ? (
           <div className="btnCenter">
@@ -49,8 +57,9 @@ const ItemDetail = ({ producto }) => {
           </div>
         ) : (
           <ItemCount
-            producto={producto.Titulo}
+            producto={producto.titulo}
             stock={producto.stock}
+            precio={producto.precio}
             onAdd={onAdd}
           />
         )}

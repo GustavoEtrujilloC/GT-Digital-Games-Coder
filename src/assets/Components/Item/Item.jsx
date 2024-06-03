@@ -6,16 +6,16 @@ const Item = ({ producto }) => {
     <div className="cardContainer">
       <div className="card">
         <div className="imgBx">
-          <img src={producto.Imagen}></img>
+          <img src={producto.imagenPortada}></img>
         </div>
         <div className="contentBx">
-          <h2>{producto.Titulo}</h2>
+          <h2>{producto.titulo}</h2>
           <div className="consola">
             <h3>
-              Plataforma:<span>{producto.Plataforma}</span>
+              Plataforma:<span>{producto.plataforma}</span>
             </h3>
           </div>
-          <h3 className="price">Precio: {producto.Precio}$</h3>
+          <h3 className="price">Precio: {producto.precio}$</h3>
           <Link to={`/item/${producto.id}`}>Comprar</Link>
         </div>
       </div>

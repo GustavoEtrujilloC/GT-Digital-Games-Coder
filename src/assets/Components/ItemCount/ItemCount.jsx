@@ -6,7 +6,7 @@ import "./ItemCount.css";
 import Button1 from "../Buttons/Button1";
 import { notifications } from "@mantine/notifications";
 
-const ItemCount = ({ stock, onAdd, producto }) => {
+const ItemCount = ({ stock, onAdd, producto, precio }) => {
   const [count, setCount] = useState(1);
 
   const sumar = () => {
@@ -20,16 +20,20 @@ const ItemCount = ({ stock, onAdd, producto }) => {
   };
 
   const sendQuantity = () => {
-    onAdd(
-      count,
-      notifications.show({
-        title: "Carrito",
-        color: "orange",
-        autoClose: 5000,
-        style: { fontWeight: "bold", color: "black" },
+    if (
+      precio === undefined || precio === null
+        ? alert("Producto no disponible")
+        : onAdd(
+            count,
+            notifications.show({
+              title: "Carrito",
+              color: "orange",
+              autoClose: 5000,
+              style: { fontWeight: "bold", color: "black" },
 
-        message: `"Agregaste ${producto} al carrito "`,
-      })
+              message: `"Agregaste ${producto} al carrito "`,
+            })
+          )
     );
   };
 

@@ -21,10 +21,10 @@ const CartView = ({ opened, close }) => {
       <div className="mapContainer">
         {cart.map((buy) => (
           <div className="cartItems" key={buy.id}>
-            <img src={buy.image} alt="productImg" />
+            <img src={buy.imagenPortada} alt="productImg" />
             <div className="gameTitleContainer">
               <h2>Juego</h2>
-              <h3>{buy.name}</h3>
+              <h3>{buy.titulo}</h3>
             </div>
             <div className="gameQuantityContainer">
               <h2>Cantidad</h2>
@@ -32,7 +32,7 @@ const CartView = ({ opened, close }) => {
             </div>
             <div className="cartPriceContainer">
               <h2>Precio</h2>
-              <h3>{buy.price}$</h3>
+              <h3>{buy.precio}$</h3>
               <ButtonX onClick={() => removeItem(buy.id)}>
                 <span className="text">Quitar</span>
               </ButtonX>

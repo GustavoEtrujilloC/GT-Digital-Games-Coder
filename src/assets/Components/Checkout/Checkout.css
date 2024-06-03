@@ -124,8 +124,8 @@ textarea {
 }
 
 .orderDetails__resume img {
-  width: 2.5rem;
-  flex-basis: 20%;
+  width: 3rem;
+  flex-basis: 33%;
   border-radius: 0.9375rem;
 }
 

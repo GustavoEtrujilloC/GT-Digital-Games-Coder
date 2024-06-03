@@ -5,8 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
 }
 
 .cardcarousel:hover {
@@ -14,21 +13,23 @@
 }
 
 .buy_buttom {
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  gap: 0.9375rem;
+  justify-content: space-between;
+  align-items: stretch;
   position: absolute;
-  bottom: 5%;
+  left: 0;
+  bottom: 0;
 }
 
 .carousel_price {
   background-color: orange;
   text-align: center;
-  width: 40%;
-  border-radius: 0.625rem;
-  padding: 0.625rem;
+  max-width: 100%;
+  flex-basis: 100%;
+  border-radius: 0;
+  padding: 0.6875rem;
   text-shadow: 0.125rem 0.125rem black;
   color: ghostwhite;
   font-size: 1.25rem;

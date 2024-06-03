@@ -150,9 +150,9 @@ const Checkout = () => {
               </div>
               {cart.map((buy) => (
                 <div className="orderDetails__resume" key={buy.id}>
-                  <img src={buy.image} alt="" />
-                  <h3>{buy.name}</h3>
-                  <h3>{buy.price}$</h3>
+                  <img src={buy.imagenPortada} alt="" />
+                  <h3>{buy.titulo}</h3>
+                  <h3>{buy.precio}$</h3>
                 </div>
               ))}
               <div className="orderDetails__totalContainer">

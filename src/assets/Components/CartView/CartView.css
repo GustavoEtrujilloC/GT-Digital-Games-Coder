@@ -57,12 +57,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0.9375rem;
   padding: 0.9375rem;
   border-bottom: solid 1px black;
 }
 
 .cartItems img {
-  width: 10.625rem;
+  width: 12.5rem;
   height: auto;
   border-radius: 0.9375rem;
 }
@@ -141,7 +142,7 @@
 @media screen and (max-width: 768px) {
   .cartViewContainer {
     padding: 0.625rem 0.3125rem;
-    width: 60%;
+    width: 80%;
     gap: 0.3125rem;
   }
 
@@ -225,7 +226,7 @@
 @media screen and (max-width: 576px) {
   .cartViewContainer {
     padding: 0.625rem 0.3125rem;
-    width: 75%;
+    width: 80%;
     gap: 0.3125rem;
   }
 

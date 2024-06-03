@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
       autoClose: 5000,
       style: { fontWeight: "bold", color: "black" },
       color: "red",
-      message: `Eliminaste ${removedItem.name} del carrito`,
+      message: `Eliminaste ${removedItem.titulo} del carrito`,
     });
   };
 
@@ -55,7 +55,7 @@ export const CartProvider = ({ children }) => {
 
   const totalBuy = () => {
     return parseFloat(
-      cart.reduce((acc, buy) => acc + buy.price * buy.quantity, 0).toFixed(2)
+      cart.reduce((acc, buy) => acc + buy.precio * buy.quantity, 0).toFixed(2)
     );
   };
 

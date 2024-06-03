@@ -15,7 +15,12 @@ function CardsCarousel() {
   const slides = productos.map((item, id) => {
     return (
       <Carousel.Slide key={id}>
-        <Card id={item.id} price={item.Precio} image={item.Imagen} />
+        <Card
+          id={item.id}
+          price={item.precio}
+          img={item.imagenPortada}
+          title={item.titulo}
+        />
       </Carousel.Slide>
     );
   });
@@ -34,19 +39,21 @@ function CardsCarousel() {
 
 export default CardsCarousel;
 
-function Card({ image, price, id }) {
+function Card({ img, price, id, title }) {
   return (
     <Paper
       shadow="md"
       p="md"
-      radius="0"
-      style={{ backgroundImage: `url(${image})` }}
+      radius="15"
+      style={{ backgroundImage: `url(${img})` }}
       className={classes.cardcarousel}
     >
       <div className={classes.buy_buttom}>
         <h3 className={classes.carousel_price}>{price}$</h3>
         <Link to={`/item/${id}`}>
-          <Button1>Comprar</Button1>
+          <Button1 borderRadius={0} height={55}>
+            Comprar
+          </Button1>
         </Link>
       </div>
     </Paper>
