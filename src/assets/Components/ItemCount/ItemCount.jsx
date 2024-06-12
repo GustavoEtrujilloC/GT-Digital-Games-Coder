@@ -30,13 +30,13 @@ const ItemCount = ({
 
   const sendQuantity = () => {
     const precio =
-      tipoCuenta === "Cuenta Primaria" ? precioPrimario : precioSecundario;
+      account === "Cuenta Primaria" ? precioPrimario : precioSecundario;
 
     if (count !== 1 || precio === 0) {
       alert("Selecciona una cantidad");
       return;
     }
-    if (tipoCuenta === "Cuenta") {
+    if (account === "Cuenta") {
       alert("Selecciona una cuenta");
       return;
     }
