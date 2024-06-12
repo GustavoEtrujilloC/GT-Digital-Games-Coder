@@ -7,7 +7,9 @@ import "../CartView/CartView.css";
 import { RiShoppingCartLine } from "react-icons/ri";
 
 const CartView = ({ opened, close }) => {
-  const { cart, removeItem, totalBuy, clearCart } = useContext(CartContext);
+  const { cart, removeItem, totalBuy, clearCart, addItem } =
+    useContext(CartContext);
+  console.log(cart);
 
   return (
     <div className="cartViewContainer">
@@ -27,12 +29,18 @@ const CartView = ({ opened, close }) => {
               <h3>{buy.titulo}</h3>
             </div>
             <div className="gameQuantityContainer">
-              <h2>Cantidad</h2>
-              <h3>{buy.quantity}</h3>
+              <div className="gameQuantity">
+                <h2>Cantidad</h2>
+                <h3>{buy.quantity}</h3>
+              </div>
+              <div className="gameQuantity">
+                <h2>Tipo de Cuenta</h2>
+                <h3>{buy.account}</h3>
+              </div>
             </div>
             <div className="cartPriceContainer">
               <h2>Precio</h2>
-              <h3>{buy.precio}$</h3>
+              <h3>{buy.precioSeleccionado}$</h3>
               <ButtonX onClick={() => removeItem(buy.id)}>
                 <span className="text">Quitar</span>
               </ButtonX>

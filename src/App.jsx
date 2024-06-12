@@ -23,6 +23,8 @@ import "@mantine/carousel/styles.css";
 import "@mantine/notifications/styles.css";
 import { ProductProvider } from "./context/ProductosContext";
 import { Notifications } from "@mantine/notifications";
+import { PriceProvider } from "./context/PriceContext";
+import { AccountProvider } from "./context/AccountContext";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,42 +40,51 @@ function App() {
   return (
     <MantineProvider>
       <Notifications />
-      <ProductProvider>
-        <CartProvider>
-          {loading ? (
-            <Loader />
-          ) : (
-            <BrowserRouter>
-              <NavBar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route
-                  path="/categories/:categoryId"
-                  element={<ItemListContainer greeting="Categoria:" />}
-                />
-                <Route
-                  path="/store"
-                  element={<ItemListContainer greeting="Juegos Digitales" />}
-                />
-                <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route
-                  path="/faq"
-                  element={<Faq greeting="Preguntas Frecuentes" />}
-                />
-                <Route
-                  path="/contacto"
-                  element={<Contacto greeting="Contacto" />}
-                />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-              <Footer />
-              <AffixButton />
-            </BrowserRouter>
-          )}
-        </CartProvider>
-      </ProductProvider>
+      <PriceProvider>
+        <ProductProvider>
+          <AccountProvider>
+            <CartProvider>
+              {loading ? (
+                <Loader />
+              ) : (
+                <BrowserRouter>
+                  <NavBar />
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route
+                      path="/categories/:categoryId"
+                      element={<ItemListContainer greeting="Categoria:" />}
+                    />
+                    <Route
+                      path="/store"
+                      element={
+                        <ItemListContainer greeting="Juegos Digitales" />
+                      }
+                    />
+                    <Route
+                      path="/item/:itemId"
+                      element={<ItemDetailContainer />}
+                    />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} />
+                    <Route
+                      path="/faq"
+                      element={<Faq greeting="Preguntas Frecuentes" />}
+                    />
+                    <Route
+                      path="/contacto"
+                      element={<Contacto greeting="Contacto" />}
+                    />
+                    <Route path="/login" element={<Login />} />
+                  </Routes>
+                  <Footer />
+                  <AffixButton />
+                </BrowserRouter>
+              )}
+            </CartProvider>
+          </AccountProvider>
+        </ProductProvider>
+      </PriceProvider>
     </MantineProvider>
   );
 }

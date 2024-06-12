@@ -1,11 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 import { notifications } from "@mantine/notifications";
+import { PriceContext } from "./PriceContext";
+import { AccountContext } from "./AccountContext";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
   const [cart, setCart] = useState(savedCart);
+  const { precioSeleccionado } = useContext(PriceContext);
+  const { account } = useContext(AccountContext);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -15,14 +19,17 @@ export const CartProvider = ({ children }) => {
     if (isInCart(item.id)) {
       const newCart = cart.map((buy) => {
         if (buy.id === item.id) {
-          return { ...buy, quantity: buy.quantity + quantity };
+          return {
+            ...buy,
+            quantity: buy.quantity + quantity,
+          };
         } else {
           return buy;
         }
       });
       setCart(newCart);
     } else {
-      setCart([...cart, { ...item, quantity }]);
+      setCart([...cart, { ...item, quantity, account, precioSeleccionado }]);
     }
   };
 
@@ -46,16 +53,16 @@ export const CartProvider = ({ children }) => {
   const isInCart = (itemId) => {
     return cart.some((buy) => buy.id === itemId);
   };
-  // cartWigget count
-  const cartQuantity = () => {
-    return cart.reduce((acc, buy) => (acc += buy.quantity), 0);
-  };
 
-  // Total buy
+  const cartQuantity = () => {
+    return cart.reduce((acc, buy) => acc + buy.quantity, 0);
+  };
 
   const totalBuy = () => {
     return parseFloat(
-      cart.reduce((acc, buy) => acc + buy.precio * buy.quantity, 0).toFixed(2)
+      cart
+        .reduce((acc, buy) => acc + buy.precioSeleccionado * buy.quantity, 0)
+        .toFixed(2)
     );
   };
 

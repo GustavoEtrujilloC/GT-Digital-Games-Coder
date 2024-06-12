@@ -1,34 +1,58 @@
 import { CartContext } from "../../../context/CartContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { NavLink } from "react-router-dom";
 import Button1 from "../Buttons/Button1";
+import { NativeSelect } from "@mantine/core";
+import { PriceContext } from "../../../context/PriceContext";
+import { AccountContext } from "../../../context/AccountContext";
 
 const ItemDetail = ({ producto }) => {
   const [buy, setBuy] = useState(false);
   const { addItem } = useContext(CartContext);
-  const [quantityAdded, setQuantityAdded] = useState(0);
-  const [count, setCount] = useState(1);
+  const [value, setValue] = useState("Cuenta");
+  const { precioSeleccionado, setPrecioSeleccionado } =
+    useContext(PriceContext);
+  const { account, setAccount } = useContext(AccountContext);
+
+  useEffect(() => {
+    if (producto) {
+      setPrecioSeleccionado(
+        value === "Cuenta Primaria"
+          ? producto.precioPrimario
+          : value === "Cuenta Secundaria"
+          ? producto.precioSecundario
+          : 0
+      );
+    }
+  }, [value, producto, setPrecioSeleccionado]);
+
+  useEffect(() => {
+    setAccount(value);
+  }, [value, setAccount]);
+
+  console.log(precioSeleccionado);
+  console.log(account);
 
   const onAdd = (quantity) => {
-    addItem(producto, quantity);
-
-    setBuy(true);
-    if (count > 0 || stock === 0) {
-      console.log("Puedes comprar", quantity);
+    if (quantity > 0) {
+      addItem(producto, quantity);
+      setBuy(true);
     } else {
-      alert("Debes seleccionar una cantidad");
+      alert("Debes seleccionar una cantidad válida");
+      return;
     }
   };
+
   return (
     <section className="content">
       <article className="gallery">
         <img
           className="gallery__image-container"
           src={producto.imagenPortada}
-        ></img>
-        \
+          alt={`${producto.titulo} portada`}
+        />
       </article>
       <article className="details">
         <div className="details_date_container">
@@ -40,13 +64,29 @@ const ItemDetail = ({ producto }) => {
         <p className="details__description">{producto.descripcion}</p>
         <div className="details__prices">
           <div>
+            <NativeSelect
+              value={value}
+              onChange={(event) => setValue(event.currentTarget.value)}
+              data={["Cuenta", "Cuenta Primaria", "Cuenta Secundaria"]}
+              label="Tipo de cuenta"
+              withAsterisk
+            />
+
             <p>Antes</p>
             <p className="details__before">{producto.precioOriginal}$</p>
           </div>
           <div>
             <p>Ahora</p>
-            <p className="details__now">{producto.precio}$</p>
+            <p className="details__now">
+              {value === "Cuenta"
+                ? 0
+                : value === "Cuenta Primaria"
+                ? producto.precioPrimario
+                : producto.precioSecundario}
+              $
+            </p>
           </div>
+
           <p>{producto.finOferta}</p>
         </div>
         {buy ? (
@@ -59,13 +99,15 @@ const ItemDetail = ({ producto }) => {
           <ItemCount
             producto={producto.titulo}
             stock={producto.stock}
-            precio={producto.precio}
+            precioPrimario={producto.precioPrimario}
+            precioSecundario={producto.precioSecundario}
             onAdd={onAdd}
+            account={account}
           />
         )}
-        {producto.stock === 3 && <p>Ultimos 3 disponibles!!</p>}
-        {producto.stock === 2 && <p>Ultimos 2 disponibles!!</p>}
-        {producto.stock === 1 && <p>Ultima unidad disponible!!</p>}
+        {producto.stock === 3 && <p>Últimos 3 disponibles!!</p>}
+        {producto.stock === 2 && <p>Últimos 2 disponibles!!</p>}
+        {producto.stock === 1 && <p>Última unidad disponible!!</p>}
       </article>
     </section>
   );

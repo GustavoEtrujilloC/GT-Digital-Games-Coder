@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import { FaMinusSquare } from "react-icons/fa";
@@ -6,11 +6,20 @@ import "./ItemCount.css";
 import Button1 from "../Buttons/Button1";
 import { notifications } from "@mantine/notifications";
 
-const ItemCount = ({ stock, onAdd, producto, precio }) => {
+const ItemCount = ({
+  stock,
+  account,
+  onAdd,
+  producto,
+  precio,
+  tipoCuenta,
+  precioPrimario,
+  precioSecundario,
+}) => {
   const [count, setCount] = useState(1);
 
   const sumar = () => {
-    if (count < stock) {
+    if (count === 0) {
       setCount(count + 1);
     }
   };
@@ -20,20 +29,33 @@ const ItemCount = ({ stock, onAdd, producto, precio }) => {
   };
 
   const sendQuantity = () => {
-    if (
-      precio === undefined || precio === null
-        ? alert("Producto no disponible")
-        : onAdd(
-            count,
-            notifications.show({
-              title: "Carrito",
-              color: "orange",
-              autoClose: 5000,
-              style: { fontWeight: "bold", color: "black" },
+    const precio =
+      tipoCuenta === "Cuenta Primaria" ? precioPrimario : precioSecundario;
 
-              message: `"Agregaste ${producto} al carrito "`,
-            })
-          )
+    if (count !== 1 || precio === 0) {
+      alert("Selecciona una cantidad");
+      return;
+    }
+    if (tipoCuenta === "Cuenta") {
+      alert("Selecciona una cuenta");
+      return;
+    }
+    if (precio === undefined || precio === null) {
+      alert("Producto no disponible");
+      return;
+    }
+
+    onAdd(
+      count,
+      precio,
+      account,
+      notifications.show({
+        title: "Carrito",
+        color: "orange",
+        autoClose: 5000,
+        style: { fontWeight: "bold", color: "black" },
+        message: `Agregaste ${producto} al carrito `,
+      })
     );
   };
 
