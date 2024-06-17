@@ -1,18 +1,30 @@
 .input {
-  margin: 3.75rem 0;
+  margin: 1.875rem 0;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 9.375rem;
 }
 
 .inputNumberContainer {
-  width: 20%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.quantityContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  font-size: 1rem;
+}
+.title {
+  font-size: 3.375rem;
 }
 
 .imgCart {
@@ -22,8 +34,8 @@
 }
 
 .input__minus {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
 }
 
 .input__minus:hover {
@@ -36,8 +48,8 @@
 }
 
 .input__plus {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
 }
 
 .input__plus:hover {
@@ -56,7 +68,8 @@
   font-weight: 700;
 }
 
-.btnCenter {
+.btnContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;

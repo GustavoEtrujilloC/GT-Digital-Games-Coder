@@ -152,18 +152,20 @@ const Checkout = () => {
                 <div className="orderDetails__resume" key={buy.id}>
                   <img src={buy.imagenPortada} alt="" />
                   <h3>{buy.titulo}</h3>
-                  <h3>{buy.precio}$</h3>
+                  <h3>{buy.precioSeleccionado}$</h3>
                 </div>
               ))}
-              <div className="orderDetails__totalContainer">
+              <div className="orderDetails__total">
                 <h3>
-                  Total a pagar:{" "}
+                  Total:{" "}
                   <span className="orderDetails__span">{totalBuy()}$</span>
                 </h3>
+              </div>
+              <div className="orderDetails__totalContainer">
                 <Link to="/cart">
-                  <Button1>Volver a Carrito</Button1>
+                  <Button1 width={220}>Volver a Carrito</Button1>
                 </Link>
-                <Button1 font="20px" onClick={checkout}>
+                <Button1 width={220} onClick={checkout}>
                   Pagar
                 </Button1>
               </div>

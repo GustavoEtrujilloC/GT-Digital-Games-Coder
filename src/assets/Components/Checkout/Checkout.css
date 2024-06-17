@@ -143,10 +143,7 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.orderDetails__totalContainer h3 {
-  font-size: 1.5rem;
+  gap: 1.25rem;
 }
 
 .orderDetails__span {
@@ -154,6 +151,11 @@ textarea {
   background-color: orangered;
   padding: 0.3125rem;
   border-radius: 0.9375rem;
+}
+
+.orderDetails__total {
+  font-size: 1.5rem;
+  align-self: flex-end;
 }
 
 @media screen and (max-width: 1400px) {
@@ -247,6 +249,11 @@ textarea {
     margin: 9.375rem auto 1.25rem auto;
     width: 75%;
   }
+  .orderDetails__total {
+    font-size: 6.25rem;
+    align-self: center;
+    padding: 0.9375rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -291,6 +298,11 @@ textarea {
 @media screen and (max-width: 576px) {
   .checkoutContainer {
     width: 90%;
+  }
+  .orderDetails__total {
+    font-size: 1.5rem;
+    align-self: center;
+    padding: 0.9375rem;
   }
 }
 
@@ -376,8 +388,8 @@ textarea {
     gap: 0.625rem;
   }
 
-  .orderDetails__totalContainer h3 {
-    font-size: 0.875rem;
-    text-align: center;
+  .orderDetails__total {
+    font-size: 1.5rem;
+    align-self: center;
   }
 }

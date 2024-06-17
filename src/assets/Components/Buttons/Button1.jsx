@@ -5,17 +5,17 @@ const Button1 = ({
   onClick,
   children,
   color,
-  font,
+  fontSize,
   width,
   height,
   borderRadius,
 }) => {
   return (
-    <button
+    <button1
       className="button1"
       style={{
         backgroundColor: color,
-        fontSize: font,
+        fontSize,
         width: width,
         height: height,
         borderRadius: borderRadius,
@@ -23,7 +23,7 @@ const Button1 = ({
       onClick={onClick}
     >
       <span className="spanButton1">{children}</span>
-    </button>
+    </button1>
   );
 };
 

@@ -5,7 +5,7 @@ import { FaMinusSquare } from "react-icons/fa";
 import "./ItemCount.css";
 import Button1 from "../Buttons/Button1";
 import { notifications } from "@mantine/notifications";
-
+import { VscError } from "react-icons/vsc";
 const ItemCount = ({
   stock,
   account,
@@ -33,15 +33,33 @@ const ItemCount = ({
       account === "Cuenta Primaria" ? precioPrimario : precioSecundario;
 
     if (count !== 1 || precio === 0) {
-      alert("Selecciona una cantidad");
+      notifications.show({
+        color: "red",
+        title: "Error",
+        message: "Debes seleccionar una cantidad",
+        autoClose: 5000,
+        icon: <VscError size={100} />,
+      });
       return;
     }
     if (account === "Cuenta") {
-      alert("Selecciona una cuenta");
+      notifications.show({
+        color: "red",
+        title: "Error",
+        message: "Debes seleccionar una cuenta",
+        autoClose: 5000,
+        icon: <VscError size={100} />,
+      });
       return;
     }
     if (precio === undefined || precio === null) {
-      alert("Producto no disponible");
+      notifications.show({
+        color: "red",
+        title: "Error",
+        message: "Producto no disponible",
+        autoClose: 5000,
+        icon: <VscError size={100} />,
+      });
       return;
     }
 
@@ -51,9 +69,8 @@ const ItemCount = ({
       account,
       notifications.show({
         title: "Carrito",
-        color: "orange",
+        color: "green",
         autoClose: 5000,
-        style: { fontWeight: "bold", color: "black" },
         message: `Agregaste ${producto} al carrito `,
       })
     );
@@ -61,13 +78,18 @@ const ItemCount = ({
 
   return (
     <div className="input">
-      <div className="inputNumberContainer">
-        <FaMinusSquare className="input__minus" onClick={restar} />
-        <span className="input__number">{count}</span>
-        <FaPlusSquare className="input__plus" onClick={sumar} />
+      <div className="quantityContainer">
+        <p>Cantidad</p>
+        <div className="inputNumberContainer">
+          <FaMinusSquare className="input__minus" onClick={restar} />
+          <span className="input__number">{count}</span>
+          <FaPlusSquare className="input__plus" onClick={sumar} />
+        </div>
       </div>
       <div className="btnContainer">
-        <Button1 onClick={sendQuantity}>Comprar</Button1>
+        <Button1 width={200} onClick={sendQuantity}>
+          Comprar
+        </Button1>
       </div>
     </div>
   );

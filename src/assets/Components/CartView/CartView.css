@@ -75,11 +75,11 @@
 }
 
 .cartItems h2 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .cartItems h3 {
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
 }
 
 .cartPriceContainer {
@@ -88,7 +88,6 @@
   justify-content: space-between;
   align-items: end;
   flex-basis: 15%;
-
   gap: 0.3125rem;
 }
 
@@ -115,11 +114,11 @@
 }
 
 .cartTotalContainer h3 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
 }
 
 .cartTotalContainer h3 span {
-  font-size: 1.125rem;
+  font-size: 1.5625rem;
   background-color: orangered;
   padding: 0.3125rem;
   border-radius: 0.625rem;
@@ -127,6 +126,70 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .cartViewContainer {
+    margin: auto;
+    padding: 3.75rem;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.9375rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    gap: 0.9375rem;
+  }
+
+  .mapContainer {
+    width: 100%;
+  }
+
+  .cartTitle h2 {
+    font-size: 1.875rem;
+  }
+
+  .gameTitleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
+
+    gap: 0.625rem;
+  }
+
+  .gameQuantityContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 30%;
+    gap: 0.9375rem;
+  }
+
+  .cartItems {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cartItems img {
+    width: 18.75rem;
+  }
+
+  .cartPriceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+    gap: 0.3125rem;
+  }
+
+  .cartPriceContainer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -356,5 +419,9 @@
   .button1 {
     font-size: 0.875rem;
     padding: 0.625rem 0.9375rem;
+  }
+
+  .cartTotalContainer h3 span {
+    font-size: 1.25rem;
   }
 }
