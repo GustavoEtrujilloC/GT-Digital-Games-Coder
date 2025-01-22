@@ -27,10 +27,10 @@ function CardsCarousel() {
 
   return (
     <Carousel
-      slideSize={{ base: "100%", md: "33%", lg: "25%", xs: "50%" }}
+      slideSize={{ base: "20%" }}
       slideGap={{ base: "md" }}
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      slidesToScroll={mobile ? 1 : 1}
+      initialSlide={mobile ? 0 : 2}
     >
       {slides}
     </Carousel>
@@ -39,11 +39,11 @@ function CardsCarousel() {
 
 export default CardsCarousel;
 
-function Card({ img, price, id, title }) {
+function Card({ img, price, id }) {
   return (
     <Paper
       shadow="md"
-      p="md"
+      p="lg"
       radius="15"
       style={{ backgroundImage: `url(${img})` }}
       className={classes.cardcarousel}
@@ -51,9 +51,7 @@ function Card({ img, price, id, title }) {
       <div className={classes.buy_buttom}>
         <h3 className={classes.carousel_price}>{price}$</h3>
         <Link to={`/item/${id}`}>
-          <Button1 borderRadius={0} height={55}>
-            Comprar
-          </Button1>
+          <button className={classes.carousel_button}>Comprar</button>
         </Link>
       </div>
     </Paper>

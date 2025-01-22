@@ -14,7 +14,7 @@ const Home = () => {
       </section>
       <section id="service" className="contenedor-service">
         <div className="service">
-          <FaEarthAmericas fontSize={125} />
+          <FaEarthAmericas className="img_service" />
           <h2>ENTREGA INMEDIATA</h2>
           <p>
             Tenemos las mejores opciones para que puedas realizar tus pagos de
@@ -22,14 +22,14 @@ const Home = () => {
           </p>
         </div>
         <div className="service">
-          <MdDiscount fontSize={125} />
+          <MdDiscount className="img_service" />
           <h2>OFERTAS</h2>
           <p>
             Nuestras entregas son tramitadas luego de la comprobación de pago.
           </p>
         </div>
         <div className="service">
-          <FaShieldAlt fontSize={125} />
+          <FaShieldAlt className="img_service" />
           <h2>PAGO SEGURO</h2>
           <p>
             Contamos con los mejores precios y ofertas, al seguir nuestras redes
@@ -37,7 +37,7 @@ const Home = () => {
           </p>
         </div>
         <div className="service">
-          <ImInfinite fontSize={125} />
+          <ImInfinite className="img_service" />
           <h2>GARANTIA</h2>
           <p>
             Los juegos que compres en GT Digital Games siempre serán tuyos, en

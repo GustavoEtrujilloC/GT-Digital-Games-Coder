@@ -5,7 +5,7 @@ const Button1 = ({
   onClick,
   children,
   color,
-  fontSize,
+  font,
   width,
   height,
   borderRadius,
@@ -15,7 +15,7 @@ const Button1 = ({
       className="button1"
       style={{
         backgroundColor: color,
-        fontSize,
+        fontSize: font,
         width: width,
         height: height,
         borderRadius: borderRadius,
